@@ -1,0 +1,466 @@
+/* ===== Lab Theme: CSS Custom Properties ===== */
+:root {
+    --lab-font: 'Inter', system-ui, -apple-system, sans-serif;
+    --lab-mono: 'Roboto Mono', 'JetBrains Mono', ui-monospace, monospace;
+    --lab-bg: #F8FAFC;
+    --lab-surface: #FFFFFF;
+    --lab-border: #E2E8F0;
+    --lab-text: #1E293B;
+    --lab-muted: #64748B;
+    --lab-blue: #2563EB;
+    --lab-green: #16A34A;
+    --lab-amber: #D97706;
+    --lab-red: #DC2626;
+    --lab-radius: 8px;
+}
+
+/* ===== AllergenScan Custom Styles ===== */
+
+/* Alert cards */
+.alert-certain {
+    border-left: 5px solid #EF4444;
+    background: #FFF5F5;
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin: 8px 0;
+}
+.alert-possible {
+    border-left: 5px solid #F59E0B;
+    background: #FFFBEB;
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin: 8px 0;
+}
+
+/* Certainty badges */
+.badge-certain {
+    background: #FEE2E2;
+    color: #B91C1C;
+    padding: 3px 10px;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 12px;
+    display: inline-block;
+}
+.badge-possible {
+    background: #FEF3C7;
+    color: #B45309;
+    padding: 3px 10px;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 12px;
+    display: inline-block;
+}
+.badge-clean {
+    background: #D1FAE5;
+    color: #065F46;
+    padding: 3px 10px;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 12px;
+    display: inline-block;
+}
+
+/* Allergen chips */
+.allergen-chip {
+    display: inline-block;
+    background: #EFF6FF;
+    color: #1D4ED8;
+    border: 1px solid #BFDBFE;
+    border-radius: 999px;
+    padding: 2px 10px;
+    font-size: 13px;
+    margin: 2px 3px;
+}
+
+/* Product card */
+.product-card {
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin: 8px 0;
+    background: #FFFFFF;
+    transition: box-shadow 0.2s;
+}
+.product-card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+.product-card-certain {
+    border-left: 4px solid #EF4444;
+}
+.product-card-possible {
+    border-left: 4px solid #F59E0B;
+}
+.product-card-clean {
+    border-left: 4px solid #10B981;
+}
+
+/* KPI card */
+.kpi-card {
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+}
+.kpi-value {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #1E293B;
+    line-height: 1.1;
+}
+.kpi-label {
+    font-size: 0.9rem;
+    color: #64748B;
+    margin-top: 4px;
+}
+
+/* Ingredient table */
+.ingredient-row-high { color: #065F46; font-weight: 500; }
+.ingredient-row-medium { color: #92400E; }
+.ingredient-row-low { color: #64748B; }
+
+/* Section headers */
+.section-header {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1E293B;
+    padding: 8px 0 4px 0;
+    border-bottom: 2px solid #E2E8F0;
+    margin-bottom: 12px;
+}
+
+/* Explanation box */
+.explanation-box {
+    background: #F8FAFC;
+    border: 1px solid #E2E8F0;
+    border-radius: 8px;
+    padding: 10px 14px;
+    font-size: 0.92rem;
+    color: #475569;
+    margin-top: 8px;
+}
+
+/* ===== Coding Assistant (Codificador FoodEx2) ===== */
+
+/* Review status badges */
+.badge-auto-approved {
+    background: #D1FAE5; color: #065F46;
+    padding: 3px 10px; border-radius: 999px;
+    font-weight: 700; font-size: 13px; display: inline-block;
+}
+.badge-needs-review {
+    background: #FEF3C7; color: #92400E;
+    padding: 3px 10px; border-radius: 999px;
+    font-weight: 700; font-size: 13px; display: inline-block;
+}
+.badge-manual-required {
+    background: #FEE2E2; color: #B91C1C;
+    padding: 3px 10px; border-radius: 999px;
+    font-weight: 700; font-size: 13px; display: inline-block;
+}
+
+/* Confidence badges */
+.badge-high {
+    background: #D1FAE5; color: #065F46;
+    padding: 2px 8px; border-radius: 999px;
+    font-size: 11px; font-weight: 600; display: inline-block;
+}
+.badge-medium {
+    background: #FEF3C7; color: #92400E;
+    padding: 2px 8px; border-radius: 999px;
+    font-size: 11px; font-weight: 600; display: inline-block;
+}
+.badge-low {
+    background: #F1F5F9; color: #475569;
+    padding: 2px 8px; border-radius: 999px;
+    font-size: 11px; font-weight: 600; display: inline-block;
+}
+.badge-no-match {
+    background: #FEE2E2; color: #B91C1C;
+    padding: 2px 8px; border-radius: 999px;
+    font-size: 11px; font-weight: 600; display: inline-block;
+}
+
+/* Ingredient cards (legacy — kept for compatibility) */
+.ingredient-card {
+    border: 1px solid #E2E8F0;
+    border-radius: 10px;
+    padding: 12px 16px;
+    margin: 6px 0;
+    background: #FFFFFF;
+}
+.ingredient-card-high     { border-left: 4px solid #10B981; }
+.ingredient-card-medium   { border-left: 4px solid #F59E0B; }
+.ingredient-card-low      { border-left: 4px solid #94A3B8; }
+.ingredient-card-no-match { border-left: 4px solid #EF4444; }
+
+/* ===== Codificador v2: Professional Lab UI ===== */
+
+/* Monospace code inline */
+.code-mono {
+    font-family: var(--lab-mono);
+    font-size: 0.82em;
+    background: #F1F5F9;
+    padding: 1px 6px;
+    border-radius: 3px;
+    color: #1E293B;
+    border: 1px solid #E2E8F0;
+}
+
+/* ── Product Summary Card ── */
+.product-summary {
+    background: var(--lab-surface);
+    border: 1px solid var(--lab-border);
+    border-radius: 10px;
+    padding: 14px 18px;
+    margin-bottom: 10px;
+    font-family: var(--lab-font);
+}
+.product-summary-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--lab-text);
+    margin: 0 0 3px 0;
+    display: inline;
+}
+.product-summary-meta {
+    font-family: var(--lab-mono);
+    font-size: 0.75em;
+    color: var(--lab-muted);
+    margin: 3px 0 8px 0;
+}
+
+/* KPI chips inside summary */
+.product-summary-kpis {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin: 8px 0 4px 0;
+}
+.kpi-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    padding: 2px 9px;
+    border-radius: 999px;
+    font-size: 0.78em;
+    font-weight: 600;
+    font-family: var(--lab-font);
+    letter-spacing: 0.01em;
+}
+.kpi-chip-high    { background: #DCFCE7; color: #15803D; }
+.kpi-chip-medium  { background: #FEF3C7; color: #92400E; }
+.kpi-chip-low     { background: #F1F5F9; color: #475569; }
+.kpi-chip-nomatch { background: #FEE2E2; color: #B91C1C; }
+
+/* Confidence bar */
+.conf-bar-wrap {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 6px 0;
+}
+.conf-bar-track {
+    flex: 1;
+    height: 5px;
+    background: #E2E8F0;
+    border-radius: 999px;
+    overflow: hidden;
+}
+.conf-bar-fill {
+    height: 100%;
+    border-radius: 999px;
+}
+.conf-bar-label {
+    font-size: 0.82em;
+    font-weight: 700;
+    min-width: 44px;
+    text-align: right;
+    font-family: var(--lab-font);
+}
+
+/* ── Allergen chip grid (v2) ── */
+.allergen-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin: 4px 0;
+}
+.chip-declared {
+    display: inline-flex; align-items: center; gap: 3px;
+    padding: 3px 9px; border-radius: 999px;
+    font-size: 0.78em; font-weight: 500; font-family: var(--lab-font);
+    background: #EFF6FF; color: #1D4ED8; border: 1.5px solid #BFDBFE;
+}
+.chip-detected-certain {
+    display: inline-flex; align-items: center; gap: 3px;
+    padding: 3px 9px; border-radius: 999px;
+    font-size: 0.78em; font-weight: 600; font-family: var(--lab-font);
+    background: #DCFCE7; color: #15803D; border: 1.5px solid #86EFAC;
+}
+.chip-detected-possible {
+    display: inline-flex; align-items: center; gap: 3px;
+    padding: 3px 9px; border-radius: 999px;
+    font-size: 0.78em; font-weight: 600; font-family: var(--lab-font);
+    background: #FEF3C7; color: #92400E; border: 1.5px solid #FDE68A;
+}
+.chip-discrepancy {
+    display: inline-flex; align-items: center; gap: 3px;
+    padding: 3px 9px; border-radius: 999px;
+    font-size: 0.78em; font-weight: 700; font-family: var(--lab-font);
+    background: #FEE2E2; color: #B91C1C; border: 1.5px solid #FECACA;
+}
+.chip-section-label {
+    font-size: 0.72em; font-weight: 600; color: var(--lab-muted);
+    text-transform: uppercase; letter-spacing: 0.06em;
+    margin: 8px 0 3px 0;
+}
+.chip-section-label-warn {
+    font-size: 0.72em; font-weight: 600; color: #B91C1C;
+    text-transform: uppercase; letter-spacing: 0.06em;
+    margin: 8px 0 3px 0;
+}
+
+/* ── FoodEx2 hierarchy tree ── */
+.foodex2-tree {
+    border-left: 2px solid #E2E8F0;
+    margin: 6px 0 6px 6px;
+}
+.foodex2-tree-row {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 3px 0;
+    position: relative;
+    font-size: 0.85em;
+    color: var(--lab-muted);
+    font-family: var(--lab-font);
+}
+.foodex2-tree-row::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 50%;
+    width: 8px; height: 1px;
+    background: #CBD5E1;
+}
+.foodex2-tree-row.current {
+    color: var(--lab-text);
+    font-weight: 600;
+}
+.tree-level {
+    font-size: 0.7em; color: #94A3B8;
+    background: #F8FAFC; border: 1px solid #E2E8F0;
+    border-radius: 3px; padding: 0 4px;
+    font-weight: 500; font-family: var(--lab-font);
+    white-space: nowrap;
+}
+.tree-code {
+    font-family: var(--lab-mono);
+    font-size: 0.82em;
+    background: #F1F5F9; color: #475569;
+    padding: 1px 5px; border-radius: 3px;
+    border: 1px solid #E2E8F0;
+    white-space: nowrap;
+}
+.foodex2-tree-row.current .tree-code {
+    background: #EFF6FF; color: var(--lab-blue);
+    border-color: #BFDBFE;
+}
+
+/* ── Facet tags ── */
+.facet-tag {
+    display: inline-flex; gap: 4px; align-items: center;
+    font-size: 0.77em; font-family: var(--lab-font);
+    background: #F8FAFC; border: 1px solid #E2E8F0;
+    border-radius: 5px; padding: 2px 8px; margin: 2px;
+    color: var(--lab-muted);
+}
+.facet-tag-label { font-weight: 600; color: var(--lab-text); }
+.facet-tag-code  { font-family: var(--lab-mono); color: var(--lab-blue); font-size: 0.9em; }
+
+/* ── Variant / RF highlight ── */
+mark.variant-hl {
+    background: #FEF9C3;
+    color: #713F12;
+    border-radius: 3px;
+    padding: 0 2px;
+    font-weight: 600;
+}
+mark.exact-hl {
+    background: #DCFCE7;
+    color: #14532D;
+    border-radius: 3px;
+    padding: 0 2px;
+    font-weight: 600;
+}
+
+/* ── Ingredient card v2 ── */
+.ingredient-card-v2 {
+    border: 1px solid var(--lab-border);
+    border-radius: 8px;
+    padding: 9px 13px;
+    margin: 4px 0;
+    background: var(--lab-surface);
+    font-family: var(--lab-font);
+}
+.ingredient-card-v2.ic-high     { border-left: 3px solid #16A34A; }
+.ingredient-card-v2.ic-medium   { border-left: 3px solid #D97706; }
+.ingredient-card-v2.ic-low      { border-left: 3px solid #94A3B8; }
+.ingredient-card-v2.ic-no-match { border-left: 3px solid #DC2626; }
+.ic-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 6px;
+}
+.ic-name {
+    font-size: 0.91em;
+    font-weight: 600;
+    color: var(--lab-text);
+}
+.ic-code {
+    font-family: var(--lab-mono);
+    font-size: 0.78em;
+    background: #EFF6FF;
+    padding: 1px 5px;
+    border-radius: 3px;
+    color: var(--lab-blue);
+    border: 1px solid #BFDBFE;
+}
+.ic-meta {
+    font-size: 0.79em;
+    color: var(--lab-muted);
+    margin-top: 2px;
+    line-height: 1.5;
+}
+
+/* ── Empty state ── */
+.empty-state-lab {
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    padding: 64px 24px; text-align: center;
+    color: var(--lab-muted);
+    border: 2px dashed #E2E8F0;
+    border-radius: 12px;
+    margin: 16px 0;
+}
+.empty-state-lab .es-icon  { font-size: 2.4rem; margin-bottom: 10px; }
+.empty-state-lab .es-title { font-size: 1rem; font-weight: 600; color: var(--lab-text); }
+.empty-state-lab .es-hint  { font-size: 0.84rem; margin-top: 5px; line-height: 1.5; }
+
+/* ── Dashboard row compact ── */
+.dash-conf-high   { color: #16A34A; font-weight: 700; }
+.dash-conf-medium { color: #D97706; font-weight: 700; }
+.dash-conf-low    { color: #DC2626; font-weight: 700; }
+.dash-counts {
+    color: #94A3B8; font-size: 0.8em;
+    font-family: var(--lab-mono);
+}
+
+/* ── Section label (compact) ── */
+.section-label-sm {
+    font-size: 0.72em; font-weight: 600; color: var(--lab-muted);
+    text-transform: uppercase; letter-spacing: 0.07em;
+    margin: 10px 0 4px 0;
+}

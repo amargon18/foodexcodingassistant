@@ -1,0 +1,326 @@
+DB_PATH      : /home/alexl/TFM/openfoodfacts.duckdb
+OUTPUT_TXT   : /home/alexl/TFM/src/test/output/matching_inspection_output
+OUTPUT_CSV   : /home/alexl/TFM/src/test/output/matching_review_sample.csv
+
+================================================================================
+1. INGREDIENT QUALITY BREAKDOWN — products_ingredients
+================================================================================
+
+  Total rows                :      771,626
+  Matchable                 :      617,764  (80.1%)
+  Context terms (excluded)  :      145,837  (18.9%)
+  Noise phrases (excluded)  :        1,731  (0.2%)
+  Additives (E-codes)       :       96,162  (12.5%)
+  Non-English tags          :        6,360  (0.8%)
+  Unique ingredients        :       27,415
+  Unique matchable          :       24,128
+
+  Sample context terms: ['added sugar', 'animal protein', 'berries', 'cereal', 'cereal flour', 'colour', 'disaccharide', 'ferment', 'flavoring', 'flavouring', 'fruit vegetable', 'microbial culture', 'minerals', 'monosaccharide', 'oil and fat', 'plant protein', 'preservative', 'protein', 'root vegetable', 'stabiliser']
+
+  Sample noise phrases: ['and less of', 'and less of apple fiber', 'and less of ascorbic acid', 'and less of carrot powder', 'and less of corn syrup', 'and less of cornstarch', 'and less of dehydrated parsley', 'and less of dextro e', 'and less of each', 'and less of eggs', 'and less of garlic', 'and less of glycerin', 'and less of jalapeno', 'and less of malic acid', 'and less of maltodextrin']
+
+================================================================================
+2. CONFIDENCE DISTRIBUTION — matching_results_ingredients
+================================================================================
+
+confidence     n  pct  avg_final_level
+  NO_MATCH 15492 67.9              2.0
+       LOW  3962 17.4              2.0
+    MEDIUM  2753 12.1              3.0
+      HIGH   617  2.7              5.0
+
+  final_level distribution:
+ final_level     n  pct
+           2 19454 85.2
+           3  2753 12.1
+           5   617  2.7
+
+================================================================================
+3. SPOT-CHECK — key test ingredients
+================================================================================
+
+  [apple juice]
+    confidence   : LOW
+    final_level  : 2
+    L2  : Alcoholic beverages  (0.4850)
+    L3  : Mixed alcoholic drinks  (0.4618)
+    spec: None  (0.0000)
+    top1: Alcoholic beverages  (0.4850)
+    top2: Fruit/vegetables/plant drinks, spreads and related products  (0.4338)
+    top3: Hot drinks and similar (coffee, cocoa, tea and herbal infusions)  (0.3910)
+
+  [yogurt]
+    confidence   : MEDIUM
+    final_level  : 3
+    L2  : Milk and milk products (dairy)  (0.4766)
+    L3  : Milk  (0.5972)
+    spec: Human milk  (0.5869)
+    top1: Milk  (0.5972)
+    top2: Buttermilk  (0.5511)
+    top3: Dairy snacks  (0.5303)
+
+  [yoghurt]  — NOT IN matching_results_ingredients
+
+  [sugar]
+    confidence   : LOW
+    final_level  : 2
+    L2  : Sugar plants  (0.6794)
+    L3  : Stalks/canes/trunk sap or similar for sugar  (0.5397)
+    spec: None  (0.0000)
+    top1: Sugar plants  (0.6794)
+    top2: Alcoholic beverages  (0.3864)
+    top3: Confectionery including chocolate  (0.3761)
+
+  [vegetable oil]
+    confidence   : MEDIUM
+    final_level  : 3
+    L2  : Oilseeds and oilfruits  (0.5519)
+    L3  : Oil fruits  (0.6897)
+    spec: Other oil fruits  (0.6166)
+    top1: Oil fruits  (0.6897)
+    top2: Oilseeds  (0.6409)
+    top3: None  (0.0000)
+
+  [potato starch]
+    confidence   : HIGH
+    final_level  : 5
+    L2  : Starchy roots and tubers and primary derivatives thereof  (0.5980)
+    L3  : Starchy root and tuber products  (0.5896)
+    spec: Potato flour  (0.7667)
+    top1: Potato flour  (0.7667)
+    top2: Mashed potato powder  (0.7443)
+    top3: Dried potato products  (0.6753)
+
+  [salt]
+    confidence   : NO_MATCH
+    final_level  : 2
+    L2  : Alcoholic beverages  (0.3456)
+    L3  : None  (0.0000)
+    spec: None  (0.0000)
+    top1: Alcoholic beverages  (0.3456)
+    top2: Seasoning, sauces and condiments  (0.3362)
+    top3: Herbs, spices and similar  (0.3129)
+
+  [potato]
+    confidence   : NO_MATCH
+    final_level  : 2
+    L2  : Starchy roots and tubers and primary derivatives thereof  (0.3902)
+    L3  : None  (0.0000)
+    spec: None  (0.0000)
+    top1: Starchy roots and tubers and primary derivatives thereof  (0.3902)
+    top2: Sugar plants  (0.3691)
+    top3: Garden vegetables and primary derivatives thereof  (0.3538)
+
+  [icing sugar]
+    confidence   : MEDIUM
+    final_level  : 3
+    L2  : Confectionery including chocolate  (0.4573)
+    L3  : Candies (soft and hard)  (0.5567)
+    spec: Hard candies  (0.5682)
+    top1: Candies (soft and hard)  (0.5567)
+    top2: Chocolate and similar  (0.4562)
+    top3: Chewing gum  (0.4355)
+
+  [burrata cheese]
+    confidence   : NO_MATCH
+    final_level  : 2
+    L2  : Milk and milk products (dairy)  (0.3456)
+    L3  : None  (0.0000)
+    spec: None  (0.0000)
+    top1: Milk and milk products (dairy)  (0.3456)
+    top2: Seafood and products thereof  (0.2900)
+    top3: Seasoning, sauces and condiments  (0.2869)
+
+  [semi skimmed milk]
+    confidence   : HIGH
+    final_level  : 5
+    L2  : Milk and milk products (dairy)  (0.6222)
+    L3  : Milk  (0.6700)
+    spec: Cow milk, semi skimmed (half fat)  (0.8423)
+    top1: Cow milk, semi skimmed (half fat)  (0.8423)
+    top2: Cow milk, skimmed (low fat)  (0.7967)
+    top3: Human milk  (0.6942)
+
+  [corn syrup]
+    confidence   : LOW
+    final_level  : 2
+    L2  : Sugar plants  (0.4770)
+    L3  : Stalks/canes/trunk sap or similar for sugar  (0.4733)
+    spec: None  (0.0000)
+    top1: Sugar plants  (0.4770)
+    top2: Water, water-based beverages and related ingredients  (0.4226)
+    top3: Alcoholic beverages  (0.4221)
+
+  [vitamin c]  — NOT IN matching_results_ingredients
+
+  [e330]  — NOT IN matching_results_ingredients
+
+  [flavouring]
+    confidence   : LOW
+    final_level  : 2
+    L2  : Seasoning, sauces and condiments  (0.5511)
+    L3  : Seasoning mixes  (0.5054)
+    spec: None  (0.0000)
+    top1: Seasoning, sauces and condiments  (0.5511)
+    top2: Herbs, spices and similar  (0.4261)
+    top3: Fruit/vegetables/plant drinks, spreads and related products  (0.4206)
+
+  [vegetable]
+    confidence   : MEDIUM
+    final_level  : 3
+    L2  : Garden vegetables and primary derivatives thereof  (0.5835)
+    L3  : Leafy vegetables  (0.7479)
+    spec: White cabbage  (0.6105)
+    top1: Leafy vegetables  (0.7479)
+    top2: Bulb vegetables  (0.6462)
+    top3: Stems/stalks eaten as vegetables  (0.6000)
+
+  [root vegetable]
+    confidence   : MEDIUM
+    final_level  : 3
+    L2  : Garden vegetables and primary derivatives thereof  (0.5539)
+    L3  : Leafy vegetables  (0.6647)
+    spec: Vegetable fern  (0.6041)
+    top1: Leafy vegetables  (0.6647)
+    top2: Root and tuber vegetables (excluding starchy- and sugar-)  (0.6599)
+    top3: Bulb vegetables  (0.6075)
+
+  [added sugar]
+    confidence   : LOW
+    final_level  : 2
+    L2  : Sugar plants  (0.5140)
+    L3  : Roots used as sugar source  (0.4589)
+    spec: None  (0.0000)
+    top1: Sugar plants  (0.5140)
+    top2: Fruit and primary derivatives thereof  (0.3447)
+    top3: Water, water-based beverages and related ingredients  (0.3386)
+
+================================================================================
+4. REVIEW SAMPLE — 30 rows per confidence level
+================================================================================
+                                 ingredient confidence  final_level                                                      level2_name                                                                 level3_name                                                                     specific_name
+                                    oregano       HIGH            5                                        Herbs, spices and similar                                                              Aromatic herbs                                                                           Oregano
+                                    almonds       HIGH            5                             Nuts and primary derivatives thereof                                                                   Tree nuts                                                                           Almonds
+               strawberry juice concentrate       HIGH            5      Fruit/vegetables/plant drinks, spreads and related products                                           Fruit/vegetable juice concentrate                                                     Juice concentrate, strawberry
+                              whole almonds       HIGH            5                             Nuts and primary derivatives thereof                                                                   Tree nuts                                                                           Almonds
+                                   hazelnut       HIGH            5                             Nuts and primary derivatives thereof                                                                   Tree nuts                                                                         Hazelnuts
+                                wheat grain       HIGH            5                                  Grains and grain-based products                   Cereal grains and similar and primary derivatives thereof                                                                       Wheat flour
+                           liquid egg white       HIGH            5                                            Eggs and egg products                                                         Liquid egg products                                                                         Egg white
+                             barley kernels       HIGH            5                                  Grains and grain-based products                   Cereal grains and similar and primary derivatives thereof                                                                     Barley grains
+                                 maize bran       HIGH            5                                  Grains and grain-based products                   Cereal grains and similar and primary derivatives thereof                                                                        Wheat bran
+                                    candies       HIGH            5                                Confectionery including chocolate                                                     Candies (soft and hard)                                                                     Jelly candies
+                 consist of white chocolate       HIGH            5                                Confectionery including chocolate                                                       Chocolate and similar                                                                   White chocolate
+                             fresh rosemary       HIGH            5                                        Herbs, spices and similar                                                              Aromatic herbs                                                                          Rosemary
+                skimmed milk joghurt powder       HIGH            5                                   Milk and milk products (dairy)                                     Milk and dairy powders and concentrates                                                              Milk powder, skimmed
+                            ned milk powder       HIGH            5                                   Milk and milk products (dairy)                                     Milk and dairy powders and concentrates                                                                       Milk powder
+                  chocolate flavour coating       HIGH            5                                Confectionery including chocolate                                              Chocolate/cocoa-based products                                                    Chocolate coated confectionery
+                    fruit juice apple juice       HIGH            5      Fruit/vegetables/plant drinks, spreads and related products                                           Fruit/vegetable juice concentrate                                                          Juice concentrate, apple
+                                    raw ham       HIGH            5                      Mammals and birds meat and products thereof                                                 Processed or preserved meat                                                                   Cooked pork ham
+                               refined salt       HIGH            5                                 Seasoning, sauces and condiments                                                                        Salt                                                                   Salt, flavoured
+                      artificial flavouring       HIGH            5   Isolated purified ingredients (including mineral or synthetic) Major isolated ingredients, additives, flavours, baking and processing aids                                                                       Flavourings
+                                 animal fat       HIGH            5                      Mammals and birds meat and products thereof                                                    Animal fresh fat tissues                                                                    Pig fat tissue
+                                cane sugara       HIGH            5                                                     Sugar plants                                 Stalks/canes/trunk sap or similar for sugar                                                                       Sugar canes
+                   in bittersweet chocolate       HIGH            5                                Confectionery including chocolate                                                       Chocolate and similar                                                            Bitter-sweet chocolate
+                      raw and glazed shrimp       HIGH            5                                     Seafood and products thereof                                              Processed or preserved seafood                                                          Dried shrimps and prawns
+                       milled brown linseed       HIGH            5                                           Oilseeds and oilfruits                                                                    Oilseeds                                                                          Linseeds
+                  natural ginger flavouring       HIGH            5                                        Herbs, spices and similar                                                     Root and rhizome spices                                                                Ginger roots spice
+                                  rice milk       HIGH            5                                   Milk and milk products (dairy)                                                                        Milk                                                                        Human milk
+                               banana mango       HIGH            5                            Fruit and primary derivatives thereof                                                         Fruit used as fruit                                                                           Mangoes
+                               wheat starch       HIGH            5                                  Grains and grain-based products                   Cereal grains and similar and primary derivatives thereof                                                                        Wheat bran
+                                   oat milk       HIGH            5                                   Milk and milk products (dairy)                                                                        Milk                                                                        Ovine milk
+                from milk buttermilk powder       HIGH            5                                   Milk and milk products (dairy)                                     Milk and dairy powders and concentrates                                                                       Milk powder
+                              water maltose        LOW            2             Water, water-based beverages and related ingredients                                                              Drinking water                                                                              None
+              chocolate confectioners glaze        LOW            2                                Confectionery including chocolate                                              Chocolate/cocoa-based products                                                                              None
+                        whole sorghum flour        LOW            2                                  Grains and grain-based products                                                 Cereal dough-based products                                                                              None
+                              spearmint oil        LOW            2                                        Herbs, spices and similar                                                              Aromatic herbs                                                                              None
+                                sugar wateb        LOW            2                                                     Sugar plants                                 Stalks/canes/trunk sap or similar for sugar                                                                              None
+                  food starch modified salt        LOW            2                                  Grains and grain-based products                                                 Cereal dough-based products                                                                              None
+             citric acid horseradish powder        LOW            2   Isolated purified ingredients (including mineral or synthetic) Major isolated ingredients, additives, flavours, baking and processing aids                                                                              None
+                         modified plant fat        LOW            2                                           Oilseeds and oilfruits                                                                    Oilseeds                                                                              None
+                          imitation lobster        LOW            2                                     Seafood and products thereof                                                               Seafood offal                                                                              None
+                          lemon oil essence        LOW            2                                        Herbs, spices and similar                                                              Aromatic herbs                                                                              None
+                                basil blend        LOW            2                                        Herbs, spices and similar                                                     Root and rhizome spices                                                                              None
+       thai sweet chilli seasoning contains        LOW            2                                 Seasoning, sauces and condiments                                                             Seasoning mixes                                                                              None
+                                   sulfates        LOW            2   Isolated purified ingredients (including mineral or synthetic)                                    Microbiological or enzymatic ingredients                                                                              None
+                 mint infused vegetable oil        LOW            2                                        Herbs, spices and similar                                                                 Seed spices                                                                              None
+                              lobster blend        LOW            2                                     Seafood and products thereof                                              Processed or preserved seafood                                                                              None
+                            brown rice malt        LOW            2                                  Grains and grain-based products                   Cereal grains and similar and primary derivatives thereof                                                                              None
+                            natural flavors        LOW            2                                        Herbs, spices and similar                                                                Fruit spices                                                                              None
+                        organic cocoa paste        LOW            2   Isolated purified ingredients (including mineral or synthetic) Major isolated ingredients, additives, flavours, baking and processing aids                                                                              None
+        may contain natural smoke flavoring        LOW            2                                        Herbs, spices and similar                                                                  Bud spices                                                                              None
+                 sodium citrate lactic acid        LOW            2   Isolated purified ingredients (including mineral or synthetic)                                    Microbiological or enzymatic ingredients                                                                              None
+                          natural flavourin        LOW            2                                        Herbs, spices and similar                                                                 Bark spices                                                                              None
+                         hoisin sauce sugar        LOW            2                                                     Sugar plants                                 Stalks/canes/trunk sap or similar for sugar                                                                              None
+                xanthan bor calcum chloride        LOW            2   Isolated purified ingredients (including mineral or synthetic) Major isolated ingredients, additives, flavours, baking and processing aids                                                                              None
+                         concentrated puree        LOW            2   Isolated purified ingredients (including mineral or synthetic) Major isolated ingredients, additives, flavours, baking and processing aids                                                                              None
+                        couscous from wheat        LOW            2                                  Grains and grain-based products                                                 Cereal dough-based products                                                                              None
+          natural flavouring natural colour        LOW            2   Isolated purified ingredients (including mineral or synthetic) Major isolated ingredients, additives, flavours, baking and processing aids                                                                              None
+      calcium disodium edta as preservative        LOW            2   Isolated purified ingredients (including mineral or synthetic)               Ingredients for food fortification/enrichment and supplements                                                                              None
+                         free baking powder        LOW            2                                Confectionery including chocolate                                                       Chocolate and similar                                                                              None
+                           sweetening blend        LOW            2                         Ingredients for hot drinks and infusions                              Hot drinks and infusions composite ingredients                                                                              None
+                       dried red chile pods        LOW            2                                        Herbs, spices and similar                                                                 Seed spices                                                                              None
+radish apple blackcurrant juice concentrate     MEDIUM            3      Fruit/vegetables/plant drinks, spreads and related products                                           Fruit/vegetable juice concentrate                                                      Juice concentrate, raspberry
+                  cultured pasteurized milk     MEDIUM            3                                   Milk and milk products (dairy)                                                     Fermented milk products                                                Traditional nordic fermented milks
+                             high fat cocoa     MEDIUM            3                                Confectionery including chocolate                                              Chocolate/cocoa-based products                                                    Chocolate coated confectionery
+                          chicken seasoning     MEDIUM            3                                 Seasoning, sauces and condiments                                                             Seasoning mixes                                                                    Pickling spice
+                            olive oil sugar     MEDIUM            3                                           Oilseeds and oilfruits                                                                  Oil fruits                                                                  Other oil fruits
+                          coldbrownd coffee     MEDIUM            3 Hot drinks and similar (coffee, cocoa, tea and herbal infusions)                                                            Coffee beverages                                                                       Iced coffee
+                                 true fruit     MEDIUM            3                            Fruit and primary derivatives thereof                                                         Fruit used as fruit                                                                       Pome fruits
+                        sugarm cocoa butter     MEDIUM            3                                Confectionery including chocolate                                              Chocolate/cocoa-based products                                                    Chocolate coated confectionery
+                   high oleic safflower oil     MEDIUM            3                                           Oilseeds and oilfruits                                                                  Oil fruits                                                                  Other oil fruits
+                            chocolate crush     MEDIUM            3                                Confectionery including chocolate                                                       Chocolate and similar                                                                   Cream chocolate
+                        natural fruit sugar     MEDIUM            3                                                     Sugar plants                                                  Roots used as sugar source                                                     Sugar beet roots and similar-
+                    lactic acid citric acid     MEDIUM            3   Isolated purified ingredients (including mineral or synthetic)                                    Microbiological or enzymatic ingredients                                                      Enzymes for food manufacture
+             condensed skimmed milk raisins     MEDIUM            3                                   Milk and milk products (dairy)                                                      Baked milk and similar                                                                              None
+                         house milled grain     MEDIUM            3                                  Grains and grain-based products                   Cereal grains and similar and primary derivatives thereof                                                              Millet rolled grains
+                from milk with soy lecithin     MEDIUM            3                                   Milk and milk products (dairy)                                                     Fermented milk products                                                                 Yoghurt, cow milk
+                 ultra filtered nonfat milk     MEDIUM            3                                   Milk and milk products (dairy)                                                             Flavoured milks                                                                              None
+                                cprn starch     MEDIUM            3         Starchy roots and tubers and primary derivatives thereof                                             Starchy root and tuber products                                            Dried starchy roots and tuber products
+                              modified food     MEDIUM            3                                        Food for particular diets                                   Food supplements and similar preparations Formulations containing special fatty acids (e.g. Omega-3, essential fatty acids)
+                     cultured 1 lowfat milk     MEDIUM            3                                   Milk and milk products (dairy)                                                             Flavoured milks                                                                              None
+                organi sunflower c flaxseed     MEDIUM            3                                           Oilseeds and oilfruits                                                                    Oilseeds                                                      Sunflower seeds and similar-
+                                   sage oil     MEDIUM            3                                        Herbs, spices and similar                                                              Aromatic herbs                                                                              Sage
+      ingredients dishniey vellogg saies 6o     MEDIUM            3                                 Seasoning, sauces and condiments                                      Savoury extracts and sauce ingredients                                                        Vegetable savoury extracts
+                                   crabmeat     MEDIUM            3                                     Seafood and products thereof                                                               Seafood offal                                                                              None
+                          green peppercorns     MEDIUM            3                                        Herbs, spices and similar                                                                  Bud spices                                                                  Other Bud spices
+                          oil of peppermint     MEDIUM            3                                           Oilseeds and oilfruits                                                                  Oil fruits                                                                  Other oil fruits
+                                 water salt     MEDIUM            3             Water, water-based beverages and related ingredients                                                              Drinking water                                                                        Well water
+                       sour cream seasoning     MEDIUM            3                                 Seasoning, sauces and condiments                                                             Seasoning mixes                                                                    Pickling spice
+                        dairy free parmesan     MEDIUM            3                                   Milk and milk products (dairy)                                                                      Cheese                                          Extra hard cheese (parmesan, grana type)
+           enriched wheat flour with niacin     MEDIUM            3                                  Grains and grain-based products                                                 Cereal dough-based products                                      Wheat bread and rolls, white (refined flour)
+                     brominated soybean oil     MEDIUM            3                                           Oilseeds and oilfruits                                                                    Oilseeds                                                               Soyabeans (oilseed)
+                           soft white wheat   NO_MATCH            2                                  Grains and grain-based products                                                                        None                                                                              None
+                                 kudzu root   NO_MATCH            2         Starchy roots and tubers and primary derivatives thereof                                                                        None                                                                              None
+                              oligofructose   NO_MATCH            2                                                     Sugar plants                                                                        None                                                                              None
+                              rice dextrins   NO_MATCH            2                                  Grains and grain-based products                                                                        None                                                                              None
+ natural and artificial pomegranate flavors   NO_MATCH            2                            Fruit and primary derivatives thereof                                                                        None                                                                              None
+               sorbic acid as preservatives   NO_MATCH            2             Water, water-based beverages and related ingredients                                                                        None                                                                              None
+                soya lecithin an emulsifier   NO_MATCH            2      Fruit/vegetables/plant drinks, spreads and related products                                                                        None                                                                              None
+                                   rye base   NO_MATCH            2                                  Grains and grain-based products                                                                        None                                                                              None
+                   british strawberry puree   NO_MATCH            2      Fruit/vegetables/plant drinks, spreads and related products                                                                        None                                                                              None
+                    pasilla mexican peppers   NO_MATCH            2                                 Seasoning, sauces and condiments                                                                        None                                                                              None
+                         bulgarian rose oil   NO_MATCH            2                                        Herbs, spices and similar                                                                        None                                                                              None
+                         blended of paprika   NO_MATCH            2                                 Seasoning, sauces and condiments                                                                        None                                                                              None
+                        topping with cheese   NO_MATCH            2                                 Seasoning, sauces and condiments                                                                        None                                                                              None
+                bovine collagen hydrolysate   NO_MATCH            2                                   Milk and milk products (dairy)                                                                        None                                                                              None
+                                 cheese dip   NO_MATCH            2                                 Seasoning, sauces and condiments                                                                        None                                                                              None
+                                gaf flavors   NO_MATCH            2      Fruit/vegetables/plant drinks, spreads and related products                                                                        None                                                                              None
+                           ground coriancer   NO_MATCH            2                                        Herbs, spices and similar                                                                        None                                                                              None
+                               shiso flavor   NO_MATCH            2                                 Seasoning, sauces and condiments                                                                        None                                                                              None
+                           squeeze of lemon   NO_MATCH            2                                        Herbs, spices and similar                                                                        None                                                                              None
+                                reduce iron   NO_MATCH            2 Hot drinks and similar (coffee, cocoa, tea and herbal infusions)                                                                        None                                                                              None
+           butter flavored shortening flake   NO_MATCH            2                                Confectionery including chocolate                                                                        None                                                                              None
+                              graham crumbs   NO_MATCH            2                                                     Sugar plants                                                                        None                                                                              None
+                      natural annatto color   NO_MATCH            2                            Fruit and primary derivatives thereof                                                                        None                                                                              None
+            sodium metaphosphate net weight   NO_MATCH            2                                  Grains and grain-based products                                                                        None                                                                              None
+                              fresh class a   NO_MATCH            2                                     Seafood and products thereof                                                                        None                                                                              None
+                                    dutched   NO_MATCH            2                                                     Sugar plants                                                                        None                                                                              None
+                                  knoblauch   NO_MATCH            2         Starchy roots and tubers and primary derivatives thereof                                                                        None                                                                              None
+                           skummetmaelkspul   NO_MATCH            2                                          Meat and dairy imitates                                                                        None                                                                              None
+                                uova intere   NO_MATCH            2   Isolated purified ingredients (including mineral or synthetic)                                                                        None                                                                              None
+                              pole and line   NO_MATCH            2                            Fruit and primary derivatives thereof                                                                        None                                                                              None
+
+================================================================================
+5. EXPORTING REVIEW CSV
+================================================================================
+  Exported 200 rows to /home/alexl/TFM/src/test/output/matching_review_sample.csv

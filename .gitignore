@@ -1,0 +1,7 @@
+openfoodfacts.duckdb
+.claude/
+.venv/
+.ipynb_checkpoints/
+.vscode/
+data/
+allergenscan/

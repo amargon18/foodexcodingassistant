@@ -1,0 +1,14 @@
+termCode --> Identificador unico termino FoodEx2. 
+termExtendedName --> Finger millet grain. El nombre oficial del alimento en inglés. Es el campo principal para el matching semántico.
+termShortName --> Nombre corto alternativo. En este caso no tiene, pero algunos términos lo usan para nombres más coloquiales.
+termScopeNote --> Descripción técnica completa (texto descriptivo, enl wikipedia, imagenes Google)
+scientificName --> Nombre Cientifico. Útil cuando nombre comercial varía entre países.
+commonNames --> Nombres alternativos.
+allFacets --> Facetas que describen alimento en detalle.
+    EJEMPLO:
+        A000B          → el propio término
+        #              → separador
+        F01.A059N      → Faceta F01 (Source): origen de la planta
+        F02.A066Q      → Faceta F02 (Part): parte del alimento
+        F27.A000B      → Faceta F27 (RACsource): materia prima de origen
+        F33.A0C4A      → Faceta F33 (Process): proceso de producción

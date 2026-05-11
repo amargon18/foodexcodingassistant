@@ -1,0 +1,711 @@
+PROJECT_ROOT: /home/alexl/TFM
+DB_PATH: /home/alexl/TFM/openfoodfacts.duckdb
+TAXONOMY_PATH: /home/alexl/TFM/nlp/ingredients.txt
+OUTPUT_TXT: /home/alexl/TFM/src/test/output/cleaning_test_output
+
+Loaded taxonomy entries: 5,965
+
+Loaded raw products: 20
+
+================================================================================
+RAW PRODUCTS
+================================================================================
+
+[0] code: 8410261643014
+product_name: Simon life
+lang_product_name: en
+ingredients_tags raw type: <class 'str'>
+ingredients_tags: en:water,en:sugar,en:added-sugar,en:disaccharide,en:orange-juice-from-concentrate,en:fruit,en:citrus-fruit,en:juice,en:fruit-juice,en:orange,en:orange-juice,en:e330,en:flavouring,en:sweetener,en:e951,en:e950,en:stabiliser,en:e414,en:e445,en:colour,en:e160ai,en:e160a
+
+[1] code: 0052159701284
+product_name: Organic Kids Blueberry Reduced Fat Yogurt Pouch
+lang_product_name: en
+ingredients_tags raw type: <class 'str'>
+ingredients_tags: en:pasteurized-skimmed-milk,en:dairy,en:milk,en:skimmed-milk,en:sugar,en:added-sugar,en:disaccharide,en:blueberry-juice-from-concentrate,en:fruit,en:berries,en:blueberry,en:e440a,en:natural-flavouring,en:flavouring,en:carrot-juice,en:vegetable,en:root-vegetable,en:taproot-vegetable,en:carrot,en:vegetable-juice,en:cholecalciferol,en:vitamins,en:vitamin-d,en:contains-live-active-cultures,en:lactobacillus-bulgaricus,en:ferment,en:microbial-culture,en:lactic-ferments,en:lactobacillus,en:lactobacillus-acidophilus,en:bifidus,en:lactobacillus-casei,en:colour,en:streptococcus-thermophilus
+
+[2] code: 0816412011127
+product_name: Spicy Sriracha Sauce
+lang_product_name: en
+ingredients_tags raw type: <class 'str'>
+ingredients_tags: fr:red-chili,fr:water,fr:sugar-fresh-garlic,fr:processed-tapioca-starch,fr:salt,fr:vinegar,fr:stabilizer,fr:preservatives,en:e1442,en:e260,en:e415,fr:sodium-benzoate,fr:potassium-sorbate,en:e211,en:e202
+
+[3] code: 0850036606048
+product_name: Organic Skyr Yogurt
+lang_product_name: en
+ingredients_tags raw type: <class 'str'>
+ingredients_tags: en:pasteurised-whole-milk,en:dairy,en:milk,en:whole-milk,en:cane-sugar,en:added-sugar,en:disaccharide,en:sugar,en:corn-starch,en:starch,en:vanila-extract,en:lemon-juice,en:fruit,en:juice,en:fruit-juice,en:e412,en:vanilla-bean-specks,en:sodium-citrate,en:minerals,en:sodium,en:lactase,en:enzyme,en:live,en:microbial-culture,en:ferment,en:streptococcus-thermophilus,en:lactic-ferments,en:bifdobacterium,en:lactobacillus-bulgaricus,en:lactobacillus
+
+[4] code: 4037719064043
+product_name: Sour Winegums
+lang_product_name: sk
+ingredients_tags raw type: <class 'str'>
+ingredients_tags: en:glucose-syrup,en:added-sugar,en:monosaccharide,en:glucose,en:sugar,en:disaccharide,en:modified-starch,en:starch,en:e428,en:water,en:acid,en:e296,en:natural-flavouring,en:flavouring,en:glazing-agent,en:colour,en:e120,en:e153,en:e330,en:e903,en:cocentrate-of-spirulina,en:safflower,en:plant
+
+[5] code: 0041270012287
+product_name: Cocktail sauce
+lang_product_name: en
+ingredients_tags raw type: <class 'str'>
+ingredients_tags: en:tomato-concentrate,en:vegetable,en:fruit-vegetable,en:tomato,en:high-fructose-corn-syrup,en:added-sugar,en:disaccharide,en:monosaccharide,en:fructose,en:glucose,en:corn-syrup,en:glucose-fructose-syrup,en:horseradish,en:root-vegetable,en:vinegar,en:salt,en:soya-oil,en:oil-and-fat,en:vegetable-oil-and-fat,en:vegetable-oil,en:dehydrated-onion,en:onion-family-vegetable,en:onion,en:garlic,en:natural-flavouring,en:flavouring,en:water
+
+[6] code: 0060410079812
+product_name: Regular Potato Chips
+lang_product_name: it
+ingredients_tags raw type: <class 'str'>
+ingredients_tags: en:potato,en:vegetable,en:root-vegetable,en:tuber,en:vegetable-oil,en:oil-and-fat,en:vegetable-oil-and-fat,en:salt
+
+[7] code: 0688267156878
+product_name: Speciality crackers
+lang_product_name: en
+ingredients_tags raw type: <class 'str'>
+ingredients_tags: en:wheat-flour,en:cereal,en:flour,en:wheat,en:cereal-flour,en:canola-oil,en:oil-and-fat,en:vegetable-oil-and-fat,en:rapeseed-oil,en:sugar,en:added-sugar,en:disaccharide,en:malt,en:salt,en:e503i,en:e503,en:e500ii,en:e500,en:butter-natural-flavouring,en:flavouring,en:natural-flavouring,en:e341i,en:e341,en:e1101,en:modified-corn-starch,en:starch,en:corn-starch,en:modified-starch,en:corn-maltodextrin,en:maltodextrin,en:fractionated-coconut-oil,en:vegetable-oil,en:coconut-oil,en:flour-treatment-agent
+
+[8] code: 0085239011652
+product_name: Pepper jack cheese
+lang_product_name: en
+ingredients_tags raw type: <class 'str'>
+ingredients_tags: en:pasteurized-semi-skimmed-milk,en:dairy,en:milk,en:semi-skimmed-milk,en:red,en:green-jalapeno-peppers,en:vegetable,en:fruit-vegetable,en:chili-pepper,en:jalapeno-pepper,en:lactic-ferments,en:ferment,en:microbial-culture,en:salt,en:enzyme,en:retinyl-palmitate,en:vitamins,en:vitamin-a,en:microbial-coagulating-enzyme,en:coagulating-enzyme
+
+[9] code: 0652729101270
+product_name: Pumpkin spice, sweetened condensed milk
+lang_product_name: en
+ingredients_tags raw type: <class 'str'>
+ingredients_tags: en:milk,en:dairy,en:sugar,en:added-sugar,en:disaccharide,en:natural-flavouring,en:flavouring
+
+[10] code: 0715141627886
+product_name: Deviled eggs
+lang_product_name: en
+ingredients_tags raw type: <class 'str'>
+ingredients_tags: en:boiled-egg,en:egg,en:dressing,en:soya-oil,en:oil-and-fat,en:vegetable-oil-and-fat,en:vegetable-oil,en:egg-yolk,en:water,en:distilled-vinegar,en:vinegar,en:sugar,en:added-sugar,en:disaccharide,en:salt,en:mustard-seed,en:condiment,en:mustard,en:spice,en:turmeric,en:onion,en:vegetable,en:root-vegetable,en:onion-family-vegetable,en:garlic,en:e415,en:horseradish,en:e330,en:e202,en:e211,en:cultured-dextrose,en:to-preserve-freshness
+
+[11] code: 0041380017028
+product_name: Bartlett pear halves in heavy syrup
+lang_product_name: en
+ingredients_tags raw type: <class 'str'>
+ingredients_tags: en:pear,en:fruit,en:water,en:corn-syrup,en:added-sugar,en:disaccharide,en:high-fructose-corn-syrup,en:monosaccharide,en:fructose,en:glucose,en:glucose-fructose-syrup,en:sugar
+
+[12] code: 0041498149079
+product_name: spreadable butter with canola oil
+lang_product_name: en
+ingredients_tags raw type: <class 'str'>
+ingredients_tags: en:cream,en:dairy,en:canola-oil,en:oil-and-fat,en:vegetable-oil-and-fat,en:rapeseed-oil,en:salt,en:retinyl-palmitate,en:vitamins,en:vitamin-a,en:e160ai,en:e160a,en:milk
+
+[13] code: 4099100067811
+product_name: Avocado chunks
+lang_product_name: es
+ingredients_tags raw type: <class 'str'>
+ingredients_tags: en:avocado-chunks,en:e300,en:e330,en:to-promote-color-retention
+
+[14] code: 0044115016426
+product_name: Cedar's, all natural hommus, chipotle
+lang_product_name: en
+ingredients_tags raw type: <class 'str'>
+ingredients_tags: en:chickpea,en:vegetable,en:legume,en:pulse,en:sunflower-oil,en:oil-and-fat,en:vegetable-oil-and-fat,en:vegetable-oil,en:olive-oil,en:tahini,en:seed,en:sesame,en:sesame-paste,en:water,en:garlic,en:root-vegetable,en:onion-family-vegetable,en:tomato-concentrate,en:fruit-vegetable,en:tomato,en:sea-salt,en:salt,en:white-vinegar,en:vinegar,en:e330,en:chipotle,en:chili-pepper,en:jalapeno-pepper,en:red-bell-pepper,en:bell-pepper,en:e412,en:onion
+
+[15] code: 90070247181414
+product_name: ""Ham,Stk,Smkd,Bi,Wa,(Ufb),Fl,12Pc""
+lang_product_name: it
+ingredients_tags raw type: <class 'str'>
+ingredients_tags: en:cured-with,en:dextrose,en:added-sugar,en:monosaccharide,en:glucose,en:salt,en:contains-2-and-less-of-sodium-phosphates,en:e326,en:e261,en:e262ii,en:e262,en:e250,en:water
+
+[16] code: 0092825094173
+product_name: Petite Diced Tomatoes With Habaneros
+lang_product_name: en
+ingredients_tags raw type: <class 'str'>
+ingredients_tags: en:tomato-juice,en:vegetable,en:fruit-vegetable,en:tomato,en:water,en:jalapeno-pepper,en:chili-pepper,en:habanero-chili,en:salt,en:e509,en:e330,en:natural-flavouring,en:flavouring,en:spice,en:condiment
+
+[17] code: 0071570000561
+product_name: Galaxy Mix Sparkling Jelly Beans
+lang_product_name: en
+ingredients_tags raw type: <class 'str'>
+ingredients_tags: en:sugar,en:added-sugar,en:disaccharide,en:corn-syrup,en:modified-starch,en:starch,en:contains-2-and-less-of-the-following,en:blackberry,en:fruit,en:berries,en:cherry-juice,en:prunus-species-fruit,en:cherry,en:grape-fruit-juice-concentrate,en:e330,en:e334,en:sodium-citrate,en:minerals,en:sodium,en:e325,en:e414,en:natural-and-artificial-flavouring,en:flavouring,en:natural-flavouring,en:artificial-flavouring,en:colour,en:e133,en:2-lake,en:e129,en:turmeric,en:condiment,en:spice,en:vegetable,en:fruit-juice,en:juice,en:e901,en:e903,en:confectioner-s-glaze,en:blueberry
+
+[18] code: 0011225549441
+product_name: Fig bars
+lang_product_name: None
+ingredients_tags raw type: <class 'str'>
+ingredients_tags: en:flour,en:high-fructose-corn-syrup,en:added-sugar,en:disaccharide,en:monosaccharide,en:fructose,en:glucose,en:corn-syrup,en:glucose-fructose-syrup,en:dextrose,en:sugar,en:fig,en:fruit,en:corn-flour,en:cereal,en:corn,en:palm-oil,en:oil-and-fat,en:vegetable-oil-and-fat,en:palm-oil-and-fat,en:pregelatinized-corn-syrup,en:salt,en:preservative,en:artificial-flavouring,en:flavouring,en:soya-lecithin,en:e322,en:e322i,en:e500ii,en:e500,en:e150a,en:e330,en:natural-flavouring,en:e160b,en:wheat-flour,en:wheat,en:cereal-flour,en:e375,en:reduced-iron,en:minerals,en:iron,en:thiamin-mononitrate,en:thiamin,en:e101,en:folic-acid,en:folate,en:preserved-with-sulfur-dioxide,en:e202,en:e211,en:colour
+
+[19] code: 0074175003579
+product_name: Healthy recipe, cream of mushroom condensed soup, cream of mushroom
+lang_product_name: en
+ingredients_tags raw type: <class 'str'>
+ingredients_tags: en:water,en:mushroom,en:modified-starch,en:starch,en:wheat-flour,en:cereal,en:flour,en:wheat,en:cereal-flour,en:contains-less-than-2-of,en:cream,en:dairy,en:sugar,en:added-sugar,en:disaccharide,en:salt,en:e508,en:natural-flavouring,en:flavouring,en:soy-protein,en:protein,en:plant-protein,en:e170i,en:e170,en:yeast-extract,en:yeast,en:whey-protein,en:animal-protein,en:milk-proteins,en:soya-oil,en:oil-and-fat,en:vegetable-oil-and-fat,en:vegetable-oil
+  Step B: dropped 93 invalid tokens, 360 remaining
+
+================================================================================
+EXPANDED INGREDIENT ROWS
+================================================================================
+
+Shape: (360, 6)
+
+Columns:
+['code', 'lang_product_name', 'product_name', 'product_context', 'ingredient', 'nlp_text']
+
+First rows:
+         code lang_product_name                                    product_name                                 product_context                       ingredient                         nlp_text
+8410261643014                en                                      Simon life                                      Simon life                            water                            water
+8410261643014                en                                      Simon life                                      Simon life                            sugar                            sugar
+8410261643014                en                                      Simon life                                      Simon life                      added sugar                      added sugar
+8410261643014                en                                      Simon life                                      Simon life                     disaccharide                     disaccharide
+8410261643014                en                                      Simon life                                      Simon life    orange juice from concentrate    orange juice from concentrate
+8410261643014                en                                      Simon life                                      Simon life                     citrus fruit                     citrus fruit
+8410261643014                en                                      Simon life                                      Simon life                            juice                            juice
+8410261643014                en                                      Simon life                                      Simon life                      fruit juice                      fruit juice
+8410261643014                en                                      Simon life                                      Simon life                           orange                           orange
+8410261643014                en                                      Simon life                                      Simon life                     orange juice                     orange juice
+8410261643014                en                                      Simon life                                      Simon life                       flavouring                       flavouring
+8410261643014                en                                      Simon life                                      Simon life                        sweetener                        sweetener
+8410261643014                en                                      Simon life                                      Simon life                       stabiliser                       stabiliser
+8410261643014                en                                      Simon life                                      Simon life                           colour                           colour
+0052159701284                en Organic Kids Blueberry Reduced Fat Yogurt Pouch Organic Kids Blueberry Reduced Fat Yogurt Pouch         pasteurized skimmed milk         pasteurized skimmed milk
+0052159701284                en Organic Kids Blueberry Reduced Fat Yogurt Pouch Organic Kids Blueberry Reduced Fat Yogurt Pouch                             milk                             milk
+0052159701284                en Organic Kids Blueberry Reduced Fat Yogurt Pouch Organic Kids Blueberry Reduced Fat Yogurt Pouch                     skimmed milk                     skimmed milk
+0052159701284                en Organic Kids Blueberry Reduced Fat Yogurt Pouch Organic Kids Blueberry Reduced Fat Yogurt Pouch                            sugar                            sugar
+0052159701284                en Organic Kids Blueberry Reduced Fat Yogurt Pouch Organic Kids Blueberry Reduced Fat Yogurt Pouch                      added sugar                      added sugar
+0052159701284                en Organic Kids Blueberry Reduced Fat Yogurt Pouch Organic Kids Blueberry Reduced Fat Yogurt Pouch                     disaccharide                     disaccharide
+0052159701284                en Organic Kids Blueberry Reduced Fat Yogurt Pouch Organic Kids Blueberry Reduced Fat Yogurt Pouch blueberry juice from concentrate blueberry juice from concentrate
+0052159701284                en Organic Kids Blueberry Reduced Fat Yogurt Pouch Organic Kids Blueberry Reduced Fat Yogurt Pouch                          berries                          berries
+0052159701284                en Organic Kids Blueberry Reduced Fat Yogurt Pouch Organic Kids Blueberry Reduced Fat Yogurt Pouch                        blueberry                        blueberry
+0052159701284                en Organic Kids Blueberry Reduced Fat Yogurt Pouch Organic Kids Blueberry Reduced Fat Yogurt Pouch               natural flavouring               natural flavouring
+0052159701284                en Organic Kids Blueberry Reduced Fat Yogurt Pouch Organic Kids Blueberry Reduced Fat Yogurt Pouch                       flavouring                       flavouring
+0052159701284                en Organic Kids Blueberry Reduced Fat Yogurt Pouch Organic Kids Blueberry Reduced Fat Yogurt Pouch                     carrot juice                     carrot juice
+0052159701284                en Organic Kids Blueberry Reduced Fat Yogurt Pouch Organic Kids Blueberry Reduced Fat Yogurt Pouch                        vegetable                        vegetable
+0052159701284                en Organic Kids Blueberry Reduced Fat Yogurt Pouch Organic Kids Blueberry Reduced Fat Yogurt Pouch                   root vegetable                   root vegetable
+0052159701284                en Organic Kids Blueberry Reduced Fat Yogurt Pouch Organic Kids Blueberry Reduced Fat Yogurt Pouch                taproot vegetable                taproot vegetable
+0052159701284                en Organic Kids Blueberry Reduced Fat Yogurt Pouch Organic Kids Blueberry Reduced Fat Yogurt Pouch                           carrot                           carrot
+0052159701284                en Organic Kids Blueberry Reduced Fat Yogurt Pouch Organic Kids Blueberry Reduced Fat Yogurt Pouch                  vegetable juice                  vegetable juice
+0052159701284                en Organic Kids Blueberry Reduced Fat Yogurt Pouch Organic Kids Blueberry Reduced Fat Yogurt Pouch                  cholecalciferol                  cholecalciferol
+0052159701284                en Organic Kids Blueberry Reduced Fat Yogurt Pouch Organic Kids Blueberry Reduced Fat Yogurt Pouch                         vitamins                         vitamins
+0052159701284                en Organic Kids Blueberry Reduced Fat Yogurt Pouch Organic Kids Blueberry Reduced Fat Yogurt Pouch    contains live active cultures    contains live active cultures
+0052159701284                en Organic Kids Blueberry Reduced Fat Yogurt Pouch Organic Kids Blueberry Reduced Fat Yogurt Pouch         lactobacillus bulgaricus         lactobacillus bulgaricus
+0052159701284                en Organic Kids Blueberry Reduced Fat Yogurt Pouch Organic Kids Blueberry Reduced Fat Yogurt Pouch                          ferment                          ferment
+0052159701284                en Organic Kids Blueberry Reduced Fat Yogurt Pouch Organic Kids Blueberry Reduced Fat Yogurt Pouch                microbial culture                microbial culture
+0052159701284                en Organic Kids Blueberry Reduced Fat Yogurt Pouch Organic Kids Blueberry Reduced Fat Yogurt Pouch                  lactic ferments                  lactic ferments
+0052159701284                en Organic Kids Blueberry Reduced Fat Yogurt Pouch Organic Kids Blueberry Reduced Fat Yogurt Pouch                    lactobacillus                    lactobacillus
+0052159701284                en Organic Kids Blueberry Reduced Fat Yogurt Pouch Organic Kids Blueberry Reduced Fat Yogurt Pouch        lactobacillus acidophilus        lactobacillus acidophilus
+0052159701284                en Organic Kids Blueberry Reduced Fat Yogurt Pouch Organic Kids Blueberry Reduced Fat Yogurt Pouch                          bifidus                          bifidus
+0052159701284                en Organic Kids Blueberry Reduced Fat Yogurt Pouch Organic Kids Blueberry Reduced Fat Yogurt Pouch              lactobacillus casei              lactobacillus casei
+0052159701284                en Organic Kids Blueberry Reduced Fat Yogurt Pouch Organic Kids Blueberry Reduced Fat Yogurt Pouch                           colour                           colour
+0052159701284                en Organic Kids Blueberry Reduced Fat Yogurt Pouch Organic Kids Blueberry Reduced Fat Yogurt Pouch       streptococcus thermophilus       streptococcus thermophilus
+0850036606048                en                             Organic Skyr Yogurt                             Organic Skyr Yogurt           pasteurised whole milk           pasteurised whole milk
+0850036606048                en                             Organic Skyr Yogurt                             Organic Skyr Yogurt                             milk                             milk
+0850036606048                en                             Organic Skyr Yogurt                             Organic Skyr Yogurt                       whole milk                       whole milk
+0850036606048                en                             Organic Skyr Yogurt                             Organic Skyr Yogurt                       cane sugar                       cane sugar
+0850036606048                en                             Organic Skyr Yogurt                             Organic Skyr Yogurt                      added sugar                      added sugar
+0850036606048                en                             Organic Skyr Yogurt                             Organic Skyr Yogurt                     disaccharide                     disaccharide
+0850036606048                en                             Organic Skyr Yogurt                             Organic Skyr Yogurt                            sugar                            sugar
+0850036606048                en                             Organic Skyr Yogurt                             Organic Skyr Yogurt                      corn starch                      corn starch
+0850036606048                en                             Organic Skyr Yogurt                             Organic Skyr Yogurt                           starch                           starch
+0850036606048                en                             Organic Skyr Yogurt                             Organic Skyr Yogurt                   vanila extract                   vanila extract
+0850036606048                en                             Organic Skyr Yogurt                             Organic Skyr Yogurt                      lemon juice                      lemon juice
+0850036606048                en                             Organic Skyr Yogurt                             Organic Skyr Yogurt                            juice                            juice
+0850036606048                en                             Organic Skyr Yogurt                             Organic Skyr Yogurt                      fruit juice                      fruit juice
+0850036606048                en                             Organic Skyr Yogurt                             Organic Skyr Yogurt              vanilla bean specks              vanilla bean specks
+0850036606048                en                             Organic Skyr Yogurt                             Organic Skyr Yogurt                   sodium citrate                   sodium citrate
+0850036606048                en                             Organic Skyr Yogurt                             Organic Skyr Yogurt                         minerals                         minerals
+0850036606048                en                             Organic Skyr Yogurt                             Organic Skyr Yogurt                           sodium                           sodium
+0850036606048                en                             Organic Skyr Yogurt                             Organic Skyr Yogurt                          lactase                          lactase
+0850036606048                en                             Organic Skyr Yogurt                             Organic Skyr Yogurt                           enzyme                           enzyme
+0850036606048                en                             Organic Skyr Yogurt                             Organic Skyr Yogurt                microbial culture                microbial culture
+0850036606048                en                             Organic Skyr Yogurt                             Organic Skyr Yogurt                          ferment                          ferment
+0850036606048                en                             Organic Skyr Yogurt                             Organic Skyr Yogurt       streptococcus thermophilus       streptococcus thermophilus
+0850036606048                en                             Organic Skyr Yogurt                             Organic Skyr Yogurt                  lactic ferments                  lactic ferments
+0850036606048                en                             Organic Skyr Yogurt                             Organic Skyr Yogurt                   bifdobacterium                   bifdobacterium
+0850036606048                en                             Organic Skyr Yogurt                             Organic Skyr Yogurt         lactobacillus bulgaricus         lactobacillus bulgaricus
+0850036606048                en                             Organic Skyr Yogurt                             Organic Skyr Yogurt                    lactobacillus                    lactobacillus
+4037719064043                sk                                   Sour Winegums                                   Sour Winegums                    glucose syrup                    glucose syrup
+4037719064043                sk                                   Sour Winegums                                   Sour Winegums                      added sugar                      added sugar
+4037719064043                sk                                   Sour Winegums                                   Sour Winegums                   monosaccharide                   monosaccharide
+4037719064043                sk                                   Sour Winegums                                   Sour Winegums                          glucose                          glucose
+4037719064043                sk                                   Sour Winegums                                   Sour Winegums                            sugar                            sugar
+4037719064043                sk                                   Sour Winegums                                   Sour Winegums                     disaccharide                     disaccharide
+4037719064043                sk                                   Sour Winegums                                   Sour Winegums                  modified starch                  modified starch
+4037719064043                sk                                   Sour Winegums                                   Sour Winegums                           starch                           starch
+4037719064043                sk                                   Sour Winegums                                   Sour Winegums                            water                            water
+4037719064043                sk                                   Sour Winegums                                   Sour Winegums               natural flavouring               natural flavouring
+4037719064043                sk                                   Sour Winegums                                   Sour Winegums                       flavouring                       flavouring
+4037719064043                sk                                   Sour Winegums                                   Sour Winegums                    glazing agent                    glazing agent
+4037719064043                sk                                   Sour Winegums                                   Sour Winegums                           colour                           colour
+4037719064043                sk                                   Sour Winegums                                   Sour Winegums          cocentrate of spirulina          cocentrate of spirulina
+4037719064043                sk                                   Sour Winegums                                   Sour Winegums                        safflower                        safflower
+0041270012287                en                                  Cocktail sauce                                  Cocktail sauce               tomato concentrate               tomato concentrate
+0041270012287                en                                  Cocktail sauce                                  Cocktail sauce                        vegetable                        vegetable
+0041270012287                en                                  Cocktail sauce                                  Cocktail sauce                  fruit vegetable                  fruit vegetable
+0041270012287                en                                  Cocktail sauce                                  Cocktail sauce                           tomato                           tomato
+0041270012287                en                                  Cocktail sauce                                  Cocktail sauce         high fructose corn syrup         high fructose corn syrup
+0041270012287                en                                  Cocktail sauce                                  Cocktail sauce                      added sugar                      added sugar
+0041270012287                en                                  Cocktail sauce                                  Cocktail sauce                     disaccharide                     disaccharide
+0041270012287                en                                  Cocktail sauce                                  Cocktail sauce                   monosaccharide                   monosaccharide
+0041270012287                en                                  Cocktail sauce                                  Cocktail sauce                         fructose                         fructose
+0041270012287                en                                  Cocktail sauce                                  Cocktail sauce                          glucose                          glucose
+0041270012287                en                                  Cocktail sauce                                  Cocktail sauce                       corn syrup                       corn syrup
+0041270012287                en                                  Cocktail sauce                                  Cocktail sauce           glucose fructose syrup           glucose-fructose syrup
+0041270012287                en                                  Cocktail sauce                                  Cocktail sauce                      horseradish                      horseradish
+0041270012287                en                                  Cocktail sauce                                  Cocktail sauce                   root vegetable                   root vegetable
+0041270012287                en                                  Cocktail sauce                                  Cocktail sauce                          vinegar                          vinegar
+
+================================================================================
+INGREDIENTS GROUPED BY PRODUCT
+================================================================================
+
+Product code: 0011225549441
+Product name: Fig bars
+Number of extracted ingredients: 37
+  - flour  ->  flour
+  - high fructose corn syrup  ->  high fructose corn syrup
+  - added sugar  ->  added sugar
+  - disaccharide  ->  disaccharide
+  - monosaccharide  ->  monosaccharide
+  - fructose  ->  fructose
+  - glucose  ->  glucose
+  - corn syrup  ->  corn syrup
+  - glucose fructose syrup  ->  glucose-fructose syrup
+  - dextrose  ->  dextrose
+  - sugar  ->  sugar
+  - fig  ->  fig
+  - corn flour  ->  corn flour
+  - cereal  ->  cereal
+  - corn  ->  corn
+  - palm oil  ->  palm oil
+  - oil and fat  ->  oil and fat
+  - vegetable oil and fat  ->  vegetable oil and fat
+  - palm oil and fat  ->  palm oil and fat
+  - pregelatinized corn syrup  ->  pregelatinized corn syrup
+  - salt  ->  salt
+  - preservative  ->  preservative
+  - artificial flavouring  ->  artificial flavouring
+  - flavouring  ->  flavouring
+  - soya lecithin  ->  soya lecithin
+  - natural flavouring  ->  natural flavouring
+  - wheat flour  ->  wheat flour
+  - wheat  ->  wheat
+  - cereal flour  ->  cereal flour
+  - reduced iron  ->  reduced iron
+  - minerals  ->  minerals
+  - thiamin mononitrate  ->  thiamin mononitrate
+  - thiamin  ->  thiamin
+  - folic acid  ->  folic acid
+  - folate  ->  folate
+  - preserved with sulfur dioxide  ->  preserved with sulfur dioxide
+  - colour  ->  colour
+
+Product code: 0041270012287
+Product name: Cocktail sauce
+Number of extracted ingredients: 27
+  - tomato concentrate  ->  tomato concentrate
+  - vegetable  ->  vegetable
+  - fruit vegetable  ->  fruit vegetable
+  - tomato  ->  tomato
+  - high fructose corn syrup  ->  high fructose corn syrup
+  - added sugar  ->  added sugar
+  - disaccharide  ->  disaccharide
+  - monosaccharide  ->  monosaccharide
+  - fructose  ->  fructose
+  - glucose  ->  glucose
+  - corn syrup  ->  corn syrup
+  - glucose fructose syrup  ->  glucose-fructose syrup
+  - horseradish  ->  horseradish
+  - root vegetable  ->  root vegetable
+  - vinegar  ->  vinegar
+  - salt  ->  salt
+  - soya oil  ->  soya oil
+  - oil and fat  ->  oil and fat
+  - vegetable oil and fat  ->  vegetable oil and fat
+  - vegetable oil  ->  vegetable oil
+  - dehydrated onion  ->  dehydrated onion
+  - onion family vegetable  ->  onion-family vegetable
+  - onion  ->  onion
+  - garlic  ->  garlic
+  - natural flavouring  ->  natural flavouring
+  - flavouring  ->  flavouring
+  - water  ->  water
+
+Product code: 0041380017028
+Product name: Bartlett pear halves in heavy syrup
+Number of extracted ingredients: 10
+  - water  ->  water
+  - corn syrup  ->  corn syrup
+  - added sugar  ->  added sugar
+  - disaccharide  ->  disaccharide
+  - high fructose corn syrup  ->  high fructose corn syrup
+  - monosaccharide  ->  monosaccharide
+  - fructose  ->  fructose
+  - glucose  ->  glucose
+  - glucose fructose syrup  ->  glucose-fructose syrup
+  - sugar  ->  sugar
+
+Product code: 0041498149079
+Product name: spreadable butter with canola oil
+Number of extracted ingredients: 9
+  - cream  ->  cream
+  - canola oil  ->  canola oil
+  - oil and fat  ->  oil and fat
+  - vegetable oil and fat  ->  vegetable oil and fat
+  - rapeseed oil  ->  rapeseed oil
+  - salt  ->  salt
+  - retinyl palmitate  ->  retinyl palmitate
+  - vitamins  ->  vitamins
+  - milk  ->  milk
+
+Product code: 0044115016426
+Product name: Cedar's, all natural hommus, chipotle
+Number of extracted ingredients: 29
+  - chickpea  ->  chickpea
+  - vegetable  ->  vegetable
+  - legume  ->  legume
+  - sunflower oil  ->  sunflower oil
+  - oil and fat  ->  oil and fat
+  - vegetable oil and fat  ->  vegetable oil and fat
+  - vegetable oil  ->  vegetable oil
+  - olive oil  ->  olive oil
+  - tahini  ->  tahini
+  - seed  ->  seed
+  - sesame  ->  sesame
+  - sesame paste  ->  sesame paste
+  - water  ->  water
+  - garlic  ->  garlic
+  - root vegetable  ->  root vegetable
+  - onion family vegetable  ->  onion-family vegetable
+  - tomato concentrate  ->  tomato concentrate
+  - fruit vegetable  ->  fruit vegetable
+  - tomato  ->  tomato
+  - sea salt  ->  sea salt
+  - salt  ->  salt
+  - white vinegar  ->  white vinegar
+  - vinegar  ->  vinegar
+  - chipotle  ->  chipotle
+  - chili pepper  ->  chili pepper
+  - jalapeno pepper  ->  jalapeno pepper
+  - red bell pepper  ->  red bell pepper
+  - bell pepper  ->  bell pepper
+  - onion  ->  onion
+
+Product code: 0052159701284
+Product name: Organic Kids Blueberry Reduced Fat Yogurt Pouch
+Number of extracted ingredients: 30
+  - pasteurized skimmed milk  ->  pasteurized skimmed milk
+  - milk  ->  milk
+  - skimmed milk  ->  skimmed milk
+  - sugar  ->  sugar
+  - added sugar  ->  added sugar
+  - disaccharide  ->  disaccharide
+  - blueberry juice from concentrate  ->  blueberry juice from concentrate
+  - berries  ->  berries
+  - blueberry  ->  blueberry
+  - natural flavouring  ->  natural flavouring
+  - flavouring  ->  flavouring
+  - carrot juice  ->  carrot juice
+  - vegetable  ->  vegetable
+  - root vegetable  ->  root vegetable
+  - taproot vegetable  ->  taproot vegetable
+  - carrot  ->  carrot
+  - vegetable juice  ->  vegetable juice
+  - cholecalciferol  ->  cholecalciferol
+  - vitamins  ->  vitamins
+  - contains live active cultures  ->  contains live active cultures
+  - lactobacillus bulgaricus  ->  lactobacillus bulgaricus
+  - ferment  ->  ferment
+  - microbial culture  ->  microbial culture
+  - lactic ferments  ->  lactic ferments
+  - lactobacillus  ->  lactobacillus
+  - lactobacillus acidophilus  ->  lactobacillus acidophilus
+  - bifidus  ->  bifidus
+  - lactobacillus casei  ->  lactobacillus casei
+  - colour  ->  colour
+  - streptococcus thermophilus  ->  streptococcus thermophilus
+
+Product code: 0060410079812
+Product name: Regular Potato Chips
+Number of extracted ingredients: 7
+  - potato  ->  potato
+  - vegetable  ->  vegetable
+  - root vegetable  ->  root vegetable
+  - vegetable oil  ->  vegetable oil
+  - oil and fat  ->  oil and fat
+  - vegetable oil and fat  ->  vegetable oil and fat
+  - salt  ->  salt
+
+Product code: 0071570000561
+Product name: Galaxy Mix Sparkling Jelly Beans
+Number of extracted ingredients: 28
+  - sugar  ->  sugar
+  - added sugar  ->  added sugar
+  - disaccharide  ->  disaccharide
+  - corn syrup  ->  corn syrup
+  - modified starch  ->  modified starch
+  - starch  ->  starch
+  - blackberry  ->  blackberry
+  - berries  ->  berries
+  - cherry juice  ->  cherry juice
+  - prunus species fruit  ->  prunus species fruit
+  - cherry  ->  cherry
+  - grape fruit juice concentrate  ->  grape fruit juice concentrate
+  - sodium citrate  ->  sodium citrate
+  - minerals  ->  minerals
+  - sodium  ->  sodium
+  - natural and artificial flavouring  ->  natural and artificial flavouring
+  - flavouring  ->  flavouring
+  - natural flavouring  ->  natural flavouring
+  - artificial flavouring  ->  artificial flavouring
+  - colour  ->  colour
+  - turmeric  ->  turmeric
+  - condiment  ->  condiment
+  - spice  ->  spice
+  - vegetable  ->  vegetable
+  - fruit juice  ->  fruit juice
+  - juice  ->  juice
+  - confectioner s glaze  ->  confectioner s glaze
+  - blueberry  ->  blueberry
+
+Product code: 0074175003579
+Product name: Healthy recipe, cream of mushroom condensed soup, cream of mushroom
+Number of extracted ingredients: 28
+  - water  ->  water
+  - mushroom  ->  mushroom
+  - modified starch  ->  modified starch
+  - starch  ->  starch
+  - wheat flour  ->  wheat flour
+  - cereal  ->  cereal
+  - flour  ->  flour
+  - wheat  ->  wheat
+  - cereal flour  ->  cereal flour
+  - cream  ->  cream
+  - sugar  ->  sugar
+  - added sugar  ->  added sugar
+  - disaccharide  ->  disaccharide
+  - salt  ->  salt
+  - natural flavouring  ->  natural flavouring
+  - flavouring  ->  flavouring
+  - soy protein  ->  soy protein
+  - protein  ->  protein
+  - plant protein  ->  plant protein
+  - yeast extract  ->  yeast extract
+  - yeast  ->  yeast
+  - whey protein  ->  whey protein
+  - animal protein  ->  animal protein
+  - milk proteins  ->  milk proteins
+  - soya oil  ->  soya oil
+  - oil and fat  ->  oil and fat
+  - vegetable oil and fat  ->  vegetable oil and fat
+  - vegetable oil  ->  vegetable oil
+
+Product code: 0085239011652
+Product name: Pepper jack cheese
+Number of extracted ingredients: 17
+  - pasteurized semi skimmed milk  ->  pasteurized semi-skimmed milk
+  - milk  ->  milk
+  - semi skimmed milk  ->  semi-skimmed milk
+  - green jalapeno peppers  ->  green jalapeno peppers
+  - vegetable  ->  vegetable
+  - fruit vegetable  ->  fruit vegetable
+  - chili pepper  ->  chili pepper
+  - jalapeno pepper  ->  jalapeno pepper
+  - lactic ferments  ->  lactic ferments
+  - ferment  ->  ferment
+  - microbial culture  ->  microbial culture
+  - salt  ->  salt
+  - enzyme  ->  enzyme
+  - retinyl palmitate  ->  retinyl palmitate
+  - vitamins  ->  vitamins
+  - microbial coagulating enzyme  ->  microbial coagulating enzyme
+  - coagulating enzyme  ->  coagulating enzyme
+
+Product code: 0092825094173
+Product name: Petite Diced Tomatoes With Habaneros
+Number of extracted ingredients: 13
+  - tomato juice  ->  tomato juice
+  - vegetable  ->  vegetable
+  - fruit vegetable  ->  fruit vegetable
+  - tomato  ->  tomato
+  - water  ->  water
+  - jalapeno pepper  ->  jalapeno pepper
+  - chili pepper  ->  chili pepper
+  - habanero chili  ->  habanero chili
+  - salt  ->  salt
+  - natural flavouring  ->  natural flavouring
+  - flavouring  ->  flavouring
+  - spice  ->  spice
+  - condiment  ->  condiment
+
+Product code: 0652729101270
+Product name: Pumpkin spice, sweetened condensed milk
+Number of extracted ingredients: 6
+  - milk  ->  milk
+  - sugar  ->  sugar
+  - added sugar  ->  added sugar
+  - disaccharide  ->  disaccharide
+  - natural flavouring  ->  natural flavouring
+  - flavouring  ->  flavouring
+
+Product code: 0688267156878
+Product name: Speciality crackers
+Number of extracted ingredients: 27
+  - wheat flour  ->  wheat flour
+  - cereal  ->  cereal
+  - flour  ->  flour
+  - wheat  ->  wheat
+  - cereal flour  ->  cereal flour
+  - canola oil  ->  canola oil
+  - oil and fat  ->  oil and fat
+  - vegetable oil and fat  ->  vegetable oil and fat
+  - rapeseed oil  ->  rapeseed oil
+  - sugar  ->  sugar
+  - added sugar  ->  added sugar
+  - disaccharide  ->  disaccharide
+  - malt  ->  malt
+  - salt  ->  salt
+  - butter natural flavouring  ->  butter natural flavouring
+  - flavouring  ->  flavouring
+  - natural flavouring  ->  natural flavouring
+  - modified corn starch  ->  modified corn starch
+  - starch  ->  starch
+  - corn starch  ->  corn starch
+  - modified starch  ->  modified starch
+  - corn maltodextrin  ->  corn maltodextrin
+  - maltodextrin  ->  maltodextrin
+  - fractionated coconut oil  ->  fractionated coconut oil
+  - vegetable oil  ->  vegetable oil
+  - coconut oil  ->  coconut oil
+  - flour treatment agent  ->  flour treatment agent
+
+Product code: 0715141627886
+Product name: Deviled eggs
+Number of extracted ingredients: 28
+  - boiled egg  ->  boiled egg
+  - egg  ->  egg
+  - dressing  ->  dressing
+  - soya oil  ->  soya oil
+  - oil and fat  ->  oil and fat
+  - vegetable oil and fat  ->  vegetable oil and fat
+  - vegetable oil  ->  vegetable oil
+  - egg yolk  ->  egg yolk
+  - water  ->  water
+  - distilled vinegar  ->  distilled vinegar
+  - vinegar  ->  vinegar
+  - sugar  ->  sugar
+  - added sugar  ->  added sugar
+  - disaccharide  ->  disaccharide
+  - salt  ->  salt
+  - mustard seed  ->  mustard seed
+  - condiment  ->  condiment
+  - mustard  ->  mustard
+  - spice  ->  spice
+  - turmeric  ->  turmeric
+  - onion  ->  onion
+  - vegetable  ->  vegetable
+  - root vegetable  ->  root vegetable
+  - onion family vegetable  ->  onion-family vegetable
+  - garlic  ->  garlic
+  - horseradish  ->  horseradish
+  - cultured dextrose  ->  cultured dextrose
+  - to preserve freshness  ->  to preserve freshness
+
+Product code: 0850036606048
+Product name: Organic Skyr Yogurt
+Number of extracted ingredients: 26
+  - pasteurised whole milk  ->  pasteurised whole milk
+  - milk  ->  milk
+  - whole milk  ->  whole milk
+  - cane sugar  ->  cane sugar
+  - added sugar  ->  added sugar
+  - disaccharide  ->  disaccharide
+  - sugar  ->  sugar
+  - corn starch  ->  corn starch
+  - starch  ->  starch
+  - vanila extract  ->  vanila extract
+  - lemon juice  ->  lemon juice
+  - juice  ->  juice
+  - fruit juice  ->  fruit juice
+  - vanilla bean specks  ->  vanilla bean specks
+  - sodium citrate  ->  sodium citrate
+  - minerals  ->  minerals
+  - sodium  ->  sodium
+  - lactase  ->  lactase
+  - enzyme  ->  enzyme
+  - microbial culture  ->  microbial culture
+  - ferment  ->  ferment
+  - streptococcus thermophilus  ->  streptococcus thermophilus
+  - lactic ferments  ->  lactic ferments
+  - bifdobacterium  ->  bifdobacterium
+  - lactobacillus bulgaricus  ->  lactobacillus bulgaricus
+  - lactobacillus  ->  lactobacillus
+
+Product code: 4037719064043
+Product name: Sour Winegums
+Number of extracted ingredients: 15
+  - glucose syrup  ->  glucose syrup
+  - added sugar  ->  added sugar
+  - monosaccharide  ->  monosaccharide
+  - glucose  ->  glucose
+  - sugar  ->  sugar
+  - disaccharide  ->  disaccharide
+  - modified starch  ->  modified starch
+  - starch  ->  starch
+  - water  ->  water
+  - natural flavouring  ->  natural flavouring
+  - flavouring  ->  flavouring
+  - glazing agent  ->  glazing agent
+  - colour  ->  colour
+  - cocentrate of spirulina  ->  cocentrate of spirulina
+  - safflower  ->  safflower
+
+Product code: 4099100067811
+Product name: Avocado chunks
+Number of extracted ingredients: 2
+  - avocado chunks  ->  avocado chunks
+  - to promote color retention  ->  to promote color retention
+
+Product code: 8410261643014
+Product name: Simon life
+Number of extracted ingredients: 14
+  - water  ->  water
+  - sugar  ->  sugar
+  - added sugar  ->  added sugar
+  - disaccharide  ->  disaccharide
+  - orange juice from concentrate  ->  orange juice from concentrate
+  - citrus fruit  ->  citrus fruit
+  - juice  ->  juice
+  - fruit juice  ->  fruit juice
+  - orange  ->  orange
+  - orange juice  ->  orange juice
+  - flavouring  ->  flavouring
+  - sweetener  ->  sweetener
+  - stabiliser  ->  stabiliser
+  - colour  ->  colour
+
+Product code: 90070247181414
+Product name: ""Ham,Stk,Smkd,Bi,Wa,(Ufb),Fl,12Pc""
+Number of extracted ingredients: 7
+  - cured with  ->  cured with
+  - dextrose  ->  dextrose
+  - added sugar  ->  added sugar
+  - monosaccharide  ->  monosaccharide
+  - glucose  ->  glucose
+  - salt  ->  salt
+  - water  ->  water
+
+================================================================================
+ONE-PRODUCT INSPECTION
+================================================================================
+
+Input row:
+         code lang_product_name product_name                                                                                                                                                                                                                                                           ingredients_tags
+8410261643014                en   Simon life en:water,en:sugar,en:added-sugar,en:disaccharide,en:orange-juice-from-concentrate,en:fruit,en:citrus-fruit,en:juice,en:fruit-juice,en:orange,en:orange-juice,en:e330,en:flavouring,en:sweetener,en:e951,en:e950,en:stabiliser,en:e414,en:e445,en:colour,en:e160ai,en:e160a
+  Step B: dropped 8 invalid tokens, 14 remaining
+
+Output rows from build_ingredient_rows:
+         code lang_product_name product_name product_context                    ingredient                      nlp_text
+8410261643014                en   Simon life      Simon life                         water                         water
+8410261643014                en   Simon life      Simon life                         sugar                         sugar
+8410261643014                en   Simon life      Simon life                   added sugar                   added sugar
+8410261643014                en   Simon life      Simon life                  disaccharide                  disaccharide
+8410261643014                en   Simon life      Simon life orange juice from concentrate orange juice from concentrate
+8410261643014                en   Simon life      Simon life                  citrus fruit                  citrus fruit
+8410261643014                en   Simon life      Simon life                         juice                         juice
+8410261643014                en   Simon life      Simon life                   fruit juice                   fruit juice
+8410261643014                en   Simon life      Simon life                        orange                        orange
+8410261643014                en   Simon life      Simon life                  orange juice                  orange juice
+8410261643014                en   Simon life      Simon life                    flavouring                    flavouring
+8410261643014                en   Simon life      Simon life                     sweetener                     sweetener
+8410261643014                en   Simon life      Simon life                    stabiliser                    stabiliser
+8410261643014                en   Simon life      Simon life                        colour                        colour

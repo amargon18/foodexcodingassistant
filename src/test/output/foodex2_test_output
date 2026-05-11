@@ -1,0 +1,467 @@
+PROJECT_ROOT: /home/alexl/TFM
+HIERARCHY_PATH: /home/alexl/TFM/matching/foodHierarchy_nlp_extended.csv
+OUTPUT_TXT: /home/alexl/TFM/src/test/output/foodex2_test_output
+OUTPUT_PARQUET: /home/alexl/TFM/src/test/output/foodex2_terms.parquet
+DB_PATH: /home/alexl/TFM/openfoodfacts.duckdb
+Loaded FoodEx2 hierarchy terms: 4,571
+
+====================================================================================================
+BASIC INFO
+====================================================================================================
+
+Shape: (4571, 231)
+
+
+====================================================================================================
+REPORT HIERARCHY LEVEL DISTRIBUTION
+====================================================================================================
+reportHierarchyLevel
+1        3
+2       31
+3      157
+4      587
+5     1454
+6     1407
+7      729
+8      151
+9       40
+10      12
+
+====================================================================================================
+HIGH-LEVEL HIERARCHY EXAMPLES
+====================================================================================================
+termCode                                                 termExtendedName reportHierarchyCode  reportHierarchyLevel
+   A000J                                  Grains and grain-based products          Z0001.0001                     2
+   A010R                                                     Sugar plants          Z0001.0008                     2
+   A015E                                           Oilseeds and oilfruits          Z0001.0006                     2
+   A031E                                            Eggs and egg products          Z0001.0016                     2
+   A03JZ Hot drinks and similar (coffee, cocoa, tea and herbal infusions)          Z0001.0020                     2
+   A03LZ                                              Alcoholic beverages          Z0001.0021                     2
+   A03PV                               Food products for young population          Z0001.0023                     2
+   A03RR                                        Food for particular diets          Z0001.0024                     2
+   A03TD                                          Meat and dairy imitates          Z0001.0017                     2
+   A03VA                                                 Composite dishes          Z0001.0025                     2
+   A042N                                 Seasoning, sauces and condiments          Z0001.0026                     2
+   A04PE                                Confectionery including chocolate          Z0001.0022                     2
+   A07XJ                Garden vegetables and primary derivatives thereof          Z0001.0002                     2
+   A0B6Z                                                             Food               Z0001                     1
+   A0BA7                                                   Food simulants          Z0003.0001                     2
+   A0BB9                                                             Feed               Z0002                     1
+   A0BXX   Isolated purified ingredients (including mineral or synthetic)          Z0001.0027                     2
+   A0BXZ                                   Milk and milk products (dairy)          Z0001.0015                     2
+   A0BYQ                                                Non-food matrices               Z0003                     1
+   A0C5Y                                                      Environment          Z0003.0003                     2
+   A0C5Z                                           Food contact materials          Z0003.0002                     2
+   A0C60                                 Non-food animal-related matrices          Z0003.0004                     2
+   A0EZG                     Legume seeds and primary derivatives thereof          Z0001.0003                     2
+   A0EZH                             Nuts and primary derivatives thereof          Z0001.0005                     2
+   A0EZM                                        Herbs, spices and similar          Z0001.0009                     2
+   A0EZN                            Fruit and primary derivatives thereof          Z0001.0004                     2
+   A0EZP      Fruit/vegetables/plant drinks, spreads and related products          Z0001.0010                     2
+   A0EZQ                                     Seafood and products thereof          Z0001.0013                     2
+   A0EZR                                   Fish meat and products thereof          Z0001.0012                     2
+   A0EZS                      Mammals and birds meat and products thereof          Z0001.0011                     2
+
+====================================================================================================
+RANDOM SAMPLE OF 30 TERMS
+====================================================================================================
+termCode                                        termExtendedName                      reportHierarchyCode  reportHierarchyLevel
+   A0C6H                                            Potato puree           Z0001.0025.0001.0003.0006.0011                     6
+   A00YQ                                                   Thyme                Z0001.0009.0001.0007.0001                     5
+   A010K                                                   Canna           Z0001.0007.0001.0002.0001.0003                     6
+   A03TD                                 Meat and dairy imitates                               Z0001.0017                     2
+   A02FE                                  Freshwater crustaceans                     Z0001.0013.0001.0001                     4
+   A01SF                                           Reindeer meat           Z0001.0011.0002.0001.0010.0006                     6
+   A00TM                                          Gypsy mushroom                Z0001.0002.0011.0002.0007                     5
+   A0FBF                                             Bombay-duck           Z0001.0012.0001.0003.0003.0021                     6
+   A01LT                                                Soursops      Z0001.0004.0001.0005.0003.0011.0001                     7
+   A00AL                                           Croquembouche      Z0001.0001.0002.0003.0002.0002.0004                     7
+   A02QP                                         Cheese, burrata                Z0001.0015.0011.0001.0011                     5
+   A01XY                                           Poultry liver                Z0001.0011.0005.0001.0002                     5
+   A01ZE                                             Duck kidney           Z0001.0011.0005.0002.0002.0003                     6
+   A01DM                                                 Medlars           Z0001.0004.0001.0002.0004.0001                     6
+   A02FQ                                       Lobster, american           Z0001.0013.0001.0003.0001.0001                     6
+   A04KZ                    Unleavened or flat bread and similar      Z0001.0001.0002.0003.0001.0001.0002                     7
+   A02XH                                  Cheese, saint nectaire      Z0001.0015.0011.0003.0002.0001.0057                     7
+   A039M                                            Juice, apple                Z0001.0010.0001.0001.0002                     5
+   A00CB                                            Marzipan pie      Z0001.0001.0002.0003.0002.0005.0003                     7
+   A0D5N                              Eucalyptus infusion leaves           Z0001.0019.0001.0001.0001.0029                     6
+   A03MD                                            Beer, strong           Z0001.0021.0001.0001.0001.0001                     6
+   A0DTC                          Black crowberries (tetraploid) Z0001.0004.0001.0004.0004.0002.0003.0002                     8
+   A0D9M Other species of genus Sorghum, not elsewhere mentioned           Z0001.0001.0001.0001.0009.0003                     6
+   A03EP                                  Fruit soft drink, pear                Z0001.0018.0002.0001.0014                     5
+   A026V                                             Fish (meat)                          Z0001.0012.0001                     3
+   A027L                                      Gobies, freshwater           Z0001.0012.0001.0001.0001.0008                     6
+   A00BZ                                         Fruit pie-tarts      Z0001.0001.0002.0003.0002.0005.0002                     7
+   A06TC                                        Rosemary flavour           Z0001.0027.0006.0001.0001.0185                     6
+   A003E                                   Rice grain, parboiled      Z0001.0001.0001.0001.0007.0001.0006                     7
+   A044E                           Vegetables-based cooked sauce                Z0001.0026.0004.0003.0011                     5
+
+====================================================================================================
+SHORTEST TERM EXTENDED NAMES
+====================================================================================================
+termCode termExtendedName                           reportHierarchyCode  reportHierarchyLevel  name_len
+   A02BV              Cod                Z0001.0012.0001.0003.0002.0001                     6         3
+   A00RH              Oca                     Z0001.0002.0009.0005.0002                     5         3
+   A16QK              Gac                Z0001.0002.0008.0002.0004.0004                     6         3
+   A03PJ              Rum                     Z0001.0021.0004.0001.0002                     5         3
+   A03VP              Dal                Z0001.0025.0001.0003.0004.0002                     6         3
+   A03PG              Gin                     Z0001.0021.0004.0003.0001                     5         3
+   A0F9H             Pacu           Z0001.0012.0001.0001.0003.0006.0003                     7         4
+   A02QM             Skyr                     Z0001.0015.0011.0001.0009                     5         4
+   A02CC             Ling                Z0001.0012.0001.0003.0002.0004                     6         4
+   A00YZ             Hops                          Z0001.0009.0003.0001                     4         4
+   A03TT             Tofu                     Z0001.0017.0002.0002.0003                     5         4
+   A0EXD             Iron                     Z0001.0027.0007.0002.0006                     5         4
+   A0EXE             Zinc                     Z0001.0027.0007.0002.0005                     5         4
+   A02CD             Tusk                Z0001.0012.0001.0003.0002.0005                     6         4
+   A02CP             Scad           Z0001.0012.0001.0003.0007.0013.0002                     7         4
+   A0BB9             Feed                                         Z0002                     1         4
+   A00YH             Sage                     Z0001.0009.0001.0005.0001                     5         4
+   A0B6Z             Food                                         Z0001                     1         4
+   A02LT             Milk                               Z0001.0015.0001                     3         4
+   A02DQ             Rays                Z0001.0012.0001.0003.0008.0002                     6         4
+   A02DX             Tuna           Z0001.0012.0001.0003.0006.0001.0002                     7         4
+   A042P             Salt                               Z0001.0026.0001                     3         4
+   A048B             Acid                     Z0001.0027.0006.0004.0008                     5         4
+   A01HQ             Kaki           Z0001.0004.0001.0005.0001.0006.0001                     7         4
+   A01HG             Figs           Z0001.0004.0001.0005.0001.0002.0001                     7         4
+   A0EZB             Whey                               Z0001.0015.0006                     3         4
+   A16PE             Land                               Z0003.0003.0009                     3         4
+   A006X             Roti Z0001.0001.0002.0003.0001.0001.0002.0002.0004                     9         4
+   A00BL             Buns           Z0001.0001.0002.0003.0002.0004.0001                     7         4
+   A03MB             Beer                          Z0001.0021.0001.0001                     4         4
+
+====================================================================================================
+LONGEST TERM EXTENDED NAMES
+====================================================================================================
+termCode                                                                                               termExtendedName                 reportHierarchyCode  reportHierarchyLevel  name_len
+   A03QZ Cereals with an added high protein food which have to be reconstituted with water or other protein-free liquid           Z0001.0023.0001.0003.0001                     5       110
+   A0BA9             Poly(2,6-diphenyl-p-phenylene oxide), particle size 60-80 mesh, pore size 200 nm (Food Simulant E)                     Z0003.0001.0008                     3        98
+   A03QY                Simple cereals which have to be reconstituted with milk or other appropriate nutritious liquids           Z0001.0023.0001.0003.0003                     5        95
+   A03SX                              Formulations containing special fatty acids (e.g. Omega-3, essential fatty acids)           Z0001.0024.0004.0003.0006                     5        81
+   A0DTE                               Other species and hybrids of genera Ribes and Vaccinium, not elsewhere mentioned Z0001.0004.0001.0004.0004.0001.0019                     7        80
+   A02SG                               Soft-ripened cheese veined with blue mould (blue bavarian, blue de graven type )      Z0001.0015.0011.0003.0001.0003                     6        80
+   A00RF                                Additional not listed root and tuber vegetables (excluding starchy- and sugar-)                Z0001.0002.0009.0012                     4        79
+   A03RN                                 Fruit and vegetable juices and nectars specific for infants and young children                Z0001.0023.0002.0003                     4        78
+   A0BYA                                  Derivatives of coffee, cocoa, tea, herbal infusion materials and similar RPCs                     Z0001.0019.0006                     3        77
+   A0DVK                                   Other hybrids of Persica vulgaris or Prunus persica, not elsewhere mentioned      Z0001.0004.0001.0003.0003.0004                     6        76
+   A03RM                                   Herbal infusions (beverages) specific for infants and young children, liquid                Z0001.0023.0002.0001                     4        76
+   A046L                                    Major isolated ingredients, additives, flavours, baking and processing aids                     Z0001.0027.0006                     3        75
+   A03EA                                     Soft drink, with fruit juice (fruit content below the minimum for nectars)                Z0001.0018.0002.0001                     4        74
+   A02RT                                      Soft-ripened cheese with bloomy rind (white mould) (brie, camembert type)      Z0001.0015.0011.0003.0001.0002                     6        73
+   A01ZV                                      Asses-mules-hinnies edible offal, non-muscle, other than liver and kidney Z0001.0011.0005.0003.0001.0005.0002                     7        73
+   A0DBE                                       Other seeds of species of familia Cucurbitaceae, not elsewhere mentioned           Z0001.0006.0001.0010.0003                     5        72
+   A0DRR                                         Other species and hybrids of genus Fortunella, not elsewhere mentioned Z0001.0004.0001.0005.0001.0004.0003                     7        70
+   A03GE                                         Liquid drink bases (including concentrates and home-made preparations)                Z0001.0018.0005.0001                     4        70
+   A016D                                          Other seeds (including elsewhere non-listed oilseeds and other seeds)                Z0001.0006.0001.0016                     4        69
+   A047R                                          Food additives other than flavours, colours and artificial sweeteners                Z0001.0027.0006.0004                     4        69
+
+====================================================================================================
+DUPLICATED TERM EXTENDED NAMES
+====================================================================================================
+
+No duplicated termExtendedName values found.
+
+====================================================================================================
+KEYWORD CHECKS IN termExtendedName
+====================================================================================================
+
+----------------------------------------------------------------------------------------------------
+Keyword: milk
+Matches: 92
+termCode                      termExtendedName            reportHierarchyCode  reportHierarchyLevel
+   A00TH                      Saffron milk cap      Z0001.0002.0011.0002.0005                     5
+   A01BK  Coconut milk (cocos nucifera) liquid      Z0001.0010.0006.0001.0001                     5
+   A028M                              Milkfish Z0001.0012.0001.0002.0005.0002                     6
+   A02HH                            Ovine milk           Z0001.0015.0001.0002                     4
+   A02LT                                  Milk                Z0001.0015.0001                     3
+   A02LV                              Cow milk      Z0001.0015.0001.0001.0001                     5
+   A02LX            Cow milk, natural high fat Z0001.0015.0001.0001.0001.0001                     6
+   A02LY                       Cow milk, whole Z0001.0015.0001.0001.0001.0002                     6
+   A02LZ     Cow milk, semi skimmed (half fat) Z0001.0015.0001.0001.0001.0003                     6
+   A02MA           Cow milk, skimmed (low fat) Z0001.0015.0001.0001.0001.0004                     6
+   A02MB                             Goat milk           Z0001.0015.0001.0003                     4
+   A02MC                            Sheep milk      Z0001.0015.0001.0002.0001                     5
+   A02MD                    Water buffalo milk      Z0001.0015.0001.0001.0008                     5
+   A02ME                   Bactrian camel milk      Z0001.0015.0001.0005.0001                     5
+   A02MF                            Horse milk      Z0001.0015.0001.0004.0001                     5
+   A02MG                              Ass milk      Z0001.0015.0001.0004.0002                     5
+   A02MH Milk from other milk producer animals      Z0001.0015.0001.0005.0005                     5
+   A02MJ                            Human milk      Z0001.0015.0001.0005.0006                     5
+   A02MP                       Flavoured milks                Z0001.0015.0008                     3
+   A02MV                            Buttermilk                Z0001.0015.0007                     3
+
+----------------------------------------------------------------------------------------------------
+Keyword: cheese
+Matches: 229
+termCode                      termExtendedName                                reportHierarchyCode  reportHierarchyLevel
+   A00AR                           Cheese cake           Z0001.0001.0002.0003.0002.0003.0001.0002                     8
+   A00AS                     Cream cheese cake      Z0001.0001.0002.0003.0002.0003.0001.0002.0001                     9
+   A00AT              Cheese cream sponge cake Z0001.0001.0002.0003.0002.0003.0001.0002.0001.0001                    10
+   A00CA                    Cheese savoury pie                     Z0001.0025.0001.0001.0003.0002                     6
+   A00CG                  Cream-cheese strudel                Z0001.0001.0002.0003.0002.0006.0003                     7
+   A025Z                           Head cheese Z0001.0011.0006.0001.0003.0002.0003.0002.0005.0003                    10
+   A026S                          Liver cheese                Z0001.0011.0006.0001.0004.0002.0004                     7
+   A02QE                                Cheese                                    Z0001.0015.0011                     3
+   A02QF                  Fresh uncured cheese                               Z0001.0015.0011.0001                     4
+   A02QG                        Cottage cheese                          Z0001.0015.0011.0001.0001                     5
+   A02QN                        Cheese, boilie                          Z0001.0015.0011.0001.0010                     5
+   A02QP                       Cheese, burrata                          Z0001.0015.0011.0001.0011                     5
+   A02QQ                  Cheese, chevre frais                          Z0001.0015.0011.0001.0012                     5
+   A02QS                     Cheese, crescenza                          Z0001.0015.0011.0001.0013                     5
+   A02QT                   Cheese, juustoleipa                          Z0001.0015.0011.0001.0014                     5
+   A02QV                      Cheese, mizithra                          Z0001.0015.0011.0001.0015                     5
+   A02QX                  Cheese, triple creme                          Z0001.0015.0011.0001.0016                     5
+   A02QY                          Cheese, urda                          Z0001.0015.0011.0001.0008                     5
+   A02QZ                          Cream cheese                          Z0001.0015.0011.0001.0017                     5
+   A02RA Brined cheese (feta-type and similar)                               Z0001.0015.0011.0002                     4
+
+----------------------------------------------------------------------------------------------------
+Keyword: yogurt
+Matches: 0
+
+----------------------------------------------------------------------------------------------------
+Keyword: sugar
+Matches: 36
+termCode                                                                termExtendedName                 reportHierarchyCode  reportHierarchyLevel
+   A00LJ                                                            Sugar loaf chicories           Z0001.0002.0001.0003.0006                     5
+   A00QF                       Root and tuber vegetables (excluding starchy- and sugar-)                     Z0001.0002.0009                     3
+   A00RF Additional not listed root and tuber vegetables (excluding starchy- and sugar-)                Z0001.0002.0009.0012                     4
+   A010R                                                                    Sugar plants                          Z0001.0008                     2
+   A010T                                                                Sugar beet roots           Z0001.0008.0001.0001.0001                     5
+   A010V                                                                     Sugar canes           Z0001.0008.0002.0001.0001                     5
+   A02PG                                    Condensed milk (sometimes with added sugars)           Z0001.0015.0002.0001.0002                     5
+   A032G                                               Sugars (mono- and di-saccharides)                Z0001.0027.0002.0001                     4
+   A032H                                                          Sucrose (common sugar)           Z0001.0027.0002.0001.0001                     5
+   A032J                                                                     White sugar      Z0001.0027.0002.0001.0001.0001                     6
+   A032K                                                              Refined beet sugar Z0001.0027.0002.0001.0001.0001.0001                     7
+   A032L                                                              Refined cane sugar Z0001.0027.0002.0001.0001.0001.0002                     7
+   A032M                                                                     Brown sugar      Z0001.0027.0002.0001.0001.0002                     6
+   A032N                                                                Brown beet sugar Z0001.0027.0002.0001.0001.0002.0001                     7
+   A032P                                                                Brown cane sugar Z0001.0027.0002.0001.0001.0002.0002                     7
+   A032Q                                                                 Flavoured sugar      Z0001.0027.0002.0001.0001.0003                     6
+   A032R                                                           Sugar, icing - powder      Z0001.0027.0002.0001.0001.0004                     6
+   A033V                                                             Sugar beet molasses      Z0001.0027.0002.0003.0001.0004                     6
+   A033Y                                                             Sugar cane molasses      Z0001.0027.0002.0003.0001.0003                     6
+   A034D                                                                Sugar beet syrup      Z0001.0027.0002.0003.0002.0003                     6
+
+----------------------------------------------------------------------------------------------------
+Keyword: syrup
+Matches: 5
+termCode                   termExtendedName            reportHierarchyCode  reportHierarchyLevel
+   A033R Syrups (molasses and other syrups)           Z0001.0027.0002.0003                     4
+   A033Z                             Syrups      Z0001.0027.0002.0003.0002                     5
+   A034B                  Barley malt syrup Z0001.0027.0002.0003.0002.0001                     6
+   A034C                         Corn syrup Z0001.0027.0002.0003.0002.0002                     6
+   A034D                   Sugar beet syrup Z0001.0027.0002.0003.0002.0003                     6
+
+----------------------------------------------------------------------------------------------------
+Keyword: oil
+Matches: 69
+termCode                                                      termExtendedName                 reportHierarchyCode  reportHierarchyLevel
+   A003E                                                 Rice grain, parboiled Z0001.0001.0001.0001.0007.0001.0006                     7
+   A009R                                                       Quark oil dough      Z0001.0001.0002.0002.0010.0002                     6
+   A011P                                                         Potato boiled      Z0001.0007.0001.0001.0001.0001                     6
+   A015E                                                Oilseeds and oilfruits                          Z0001.0006                     2
+   A015F                                                              Oilseeds                     Z0001.0006.0001                     3
+   A015P                                                   Soyabeans (oilseed)           Z0001.0006.0001.0007.0001                     5
+   A016D Other seeds (including elsewhere non-listed oilseeds and other seeds)                Z0001.0006.0001.0016                     4
+   A016L                                                            Oil fruits                     Z0001.0006.0002                     3
+   A016M                                             Olives for oil production           Z0001.0006.0002.0001.0001                     5
+   A016N                                                     Oil palms kernels           Z0001.0006.0002.0002.0001                     5
+   A016P                                                      Oil palms fruits           Z0001.0006.0002.0003.0001                     5
+   A016R                                                      Other oil fruits                Z0001.0006.0002.0005                     4
+   A02DK                                                        Liveroil shark Z0001.0012.0001.0003.0008.0001.0001                     7
+   A02QN                                                        Cheese, boilie           Z0001.0015.0011.0001.0010                     5
+   A032B                                                           Boiled eggs                Z0001.0016.0004.0001                     4
+   A036E                                                         Oil seed mass                Z0001.0022.0007.0014                     4
+   A036M    Animal and vegetable fats and oils and primary derivatives thereof                     Z0001.0027.0001                     3
+   A036N                                       Vegetable fats and oils, edible           Z0001.0027.0001.0001.0001                     5
+   A036P                                                            Olive oils      Z0001.0027.0001.0001.0001.0001                     6
+   A036Q                                     Olive oil, virgin or extra-virgin Z0001.0027.0001.0001.0001.0001.0001                     7
+
+----------------------------------------------------------------------------------------------------
+Keyword: potato
+Matches: 36
+termCode                         termExtendedName                                reportHierarchyCode  reportHierarchyLevel
+   A005A Wheat bread and rolls, white with potato Z0001.0001.0002.0003.0001.0001.0001.0002.0001.0002                    10
+   A00NX                      Sweet potato leaves                     Z0001.0002.0001.0009.0001.0010                     6
+   A00ZT                                 Potatoes                          Z0001.0007.0001.0001.0001                     5
+   A00ZV                             New potatoes                     Z0001.0007.0001.0001.0001.0004                     6
+   A00ZX                       Main-crop potatoes                     Z0001.0007.0001.0001.0001.0003                     6
+   A010C                           Sweet potatoes                     Z0001.0007.0001.0002.0002.0001                     6
+   A011C                    Dried potato products                          Z0001.0007.0002.0001.0001                     5
+   A011D                            Potato flakes                     Z0001.0007.0002.0001.0001.0003                     6
+   A011E                     Mashed potato powder                     Z0001.0007.0002.0001.0001.0001                     6
+   A011F                            Potato starch                               Z0001.0027.0004.0006                     4
+   A011G                             Potato flour                     Z0001.0007.0002.0001.0001.0002                     6
+   A011L                  Potato crisps or sticks                     Z0001.0025.0004.0001.0001.0001                     6
+   A011P                            Potato boiled                     Z0001.0007.0001.0001.0001.0001                     6
+   A011Q                         Pan-fried potato                     Z0001.0025.0001.0003.0006.0009                     6
+   A011R                             Potato baked                     Z0001.0007.0001.0001.0001.0002                     6
+   A011S                        Potato croquettes                     Z0001.0025.0001.0003.0006.0012                     6
+   A011T               Potato starch-based snacks                          Z0001.0025.0004.0002.0002                     5
+   A03CP                            Juice, potato                          Z0001.0010.0001.0003.0009                     5
+   A03VD                      Potato based dishes                          Z0001.0025.0001.0003.0006                     5
+   A03VF                         Potato casserole                     Z0001.0025.0001.0003.0006.0002                     6
+
+----------------------------------------------------------------------------------------------------
+Keyword: tomato
+Matches: 26
+termCode                    termExtendedName                 reportHierarchyCode  reportHierarchyLevel
+   A00HQ               Tomatoes and similar-           Z0001.0002.0008.0001.0002                     5
+   A00HR                        Globe tomato Z0001.0002.0008.0001.0002.0001.0001                     7
+   A00HS                    Beefsteak tomato Z0001.0002.0008.0001.0002.0001.0002                     7
+   A00HT                         Plum tomato Z0001.0002.0008.0001.0002.0001.0003                     7
+   A00HV                      Oxheart tomato Z0001.0002.0008.0001.0002.0001.0004                     7
+   A00HX                Pear-shaped tomatoes Z0001.0002.0008.0001.0002.0001.0005                     7
+   A00HY                     Cherry tomatoes Z0001.0002.0008.0001.0002.0001.0006                     7
+   A00ZB Preserved tomatoes not concentrated           Z0001.0002.0012.0001.0001                     5
+   A00ZC   Preserved tomato, whole or pieces      Z0001.0002.0012.0001.0001.0001                     6
+   A00ZD                        Tomato puree      Z0001.0002.0012.0001.0001.0002                     6
+   A00ZE     Preserved concentrated tomatoes           Z0001.0002.0012.0001.0002                     5
+   A00ZF                        Tomato paste      Z0001.0002.0012.0001.0002.0001                     6
+   A00ZG                  Sun-dried tomatoes           Z0001.0002.0012.0001.0003                     5
+   A03CJ                       Juice, tomato           Z0001.0010.0001.0003.0005                     5
+   A03CT      Juice, tomato-leafy vegetables      Z0001.0010.0001.0003.0001.0001                     6
+   A03CV                Juice, tomato-carrot      Z0001.0010.0001.0003.0001.0002                     6
+   A041N                         Tomato soup           Z0001.0025.0002.0002.0009                     5
+   A044C     Tomato-containing cooked sauces           Z0001.0026.0004.0003.0002                     5
+   A044P   Tomato ketchup and related sauces           Z0001.0026.0004.0003.0008                     5
+   A045R                      Tomato chutney      Z0001.0026.0004.0004.0001.0001                     6
+
+----------------------------------------------------------------------------------------------------
+Keyword: chicken
+Matches: 14
+termCode                                              termExtendedName                      reportHierarchyCode  reportHierarchyLevel
+   A01SP                                            Chicken fresh meat           Z0001.0011.0002.0002.0001.0002                     6
+   A01VR                                     Chicken, fresh fat tissue           Z0001.0011.0003.0003.0001.0001                     6
+   A01XZ                                                 Chicken liver           Z0001.0011.0005.0001.0002.0001                     6
+   A01ZC                                                Chicken kidney           Z0001.0011.0005.0002.0002.0001                     6
+   A020F Chicken edible offal, non-muscle, other than liver and kidney           Z0001.0011.0005.0003.0002.0001                     6
+   A022B                          Chicken, other slaughtering products           Z0001.0011.0005.0005.0002.0002                     6
+   A022C                                                  Chicken feet      Z0001.0011.0005.0005.0002.0002.0001                     7
+   A026Q                                           Pate, chicken liver      Z0001.0011.0006.0001.0004.0002.0002                     7
+   A038F                                        Chicken fat, processed Z0001.0027.0001.0001.0002.0001.0004.0001                     8
+   A043G                             Stock cubes or granulate, chicken           Z0001.0026.0003.0002.0001.0001                     6
+   A04DQ                                               Chicken carcase                     Z0001.0011.0001.0010                     4
+   A04DS                                          Chicken, minced meat      Z0001.0011.0002.0002.0001.0002.0001                     7
+   A04DT                                                   Chicken msm                Z0001.0011.0004.0002.0001                     5
+   A0CRZ                                               Chicken flavour           Z0001.0027.0006.0001.0001.0053                     6
+
+----------------------------------------------------------------------------------------------------
+Keyword: beef
+Matches: 13
+termCode                       termExtendedName                      reportHierarchyCode  reportHierarchyLevel
+   A00HS                       Beefsteak tomato      Z0001.0002.0008.0001.0002.0001.0002                     7
+   A01TQ  Mixed beef and mutton/lamb fresh meat                Z0001.0011.0002.0001.0003                     5
+   A01XG                             Beef liver      Z0001.0011.0005.0001.0001.0001.0001                     7
+   A01YK                            Beef kidney      Z0001.0011.0005.0002.0001.0001.0001                     7
+   A023C                              Ham, beef Z0001.0011.0006.0001.0001.0001.0002.0001                     8
+   A023D                  Corned beef, uncooked Z0001.0011.0006.0001.0001.0001.0002.0002                     8
+   A023Q                         Pastrami, beef Z0001.0011.0006.0001.0001.0002.0002.0001                     8
+   A037X Beef tallow (including processed suet)      Z0001.0027.0001.0001.0002.0001.0002                     7
+   A03XC                              Beef loaf      Z0001.0025.0001.0003.0001.0004.0002                     7
+   A043H          Stock cube or granulate, beef           Z0001.0026.0003.0002.0001.0002                     6
+   A06KQ                           Beef flavour           Z0001.0027.0006.0001.0001.0019                     6
+   A06KR                      Beef soup flavour           Z0001.0027.0006.0001.0001.0020                     6
+   A0B9G                    Corned beef, cooked Z0001.0011.0006.0001.0001.0002.0002.0003                     8
+
+----------------------------------------------------------------------------------------------------
+Keyword: fish
+Matches: 100
+termCode                     termExtendedName                 reportHierarchyCode  reportHierarchyLevel
+   A026V                          Fish (meat)                     Z0001.0012.0001                     3
+   A026X                      Freshwater fish                Z0001.0012.0001.0001                     4
+   A027A  Bluegill sunfish, or bluegill bream      Z0001.0012.0001.0001.0003.0021                     6
+   A027J               Catfishes (freshwater)      Z0001.0012.0001.0001.0003.0001                     6
+   A027K                      Channel catfish Z0001.0012.0001.0001.0003.0001.0001                     7
+   A028E                      Diadromous fish                Z0001.0012.0001.0002                     4
+   A028M                             Milkfish      Z0001.0012.0001.0002.0005.0002                     6
+   A029P                          Paddle fish      Z0001.0012.0001.0002.0001.0002                     6
+   A029Q             Whitefishes or coregonus      Z0001.0012.0001.0002.0003.0005                     6
+   A029R                          Marine fish                Z0001.0012.0001.0003                     4
+   A029S  Miscellaneous coastal marine fishes           Z0001.0012.0001.0003.0003                     5
+   A029Z                             Wolffish Z0001.0012.0001.0003.0004.0001.0001                     7
+   A02AE                          Surgeonfish      Z0001.0012.0001.0003.0003.0022                     6
+   A02AG Miscellaneous demersal marine fishes           Z0001.0012.0001.0003.0004                     5
+   A02AJ                           Butterfish      Z0001.0012.0001.0003.0007.0001                     6
+   A02AN                      Scorpion fishes Z0001.0012.0001.0003.0004.0003.0001                     7
+   A02AQ                             Bluefish      Z0001.0012.0001.0003.0007.0004                     6
+   A02BJ  Anglerfish, monkfish and stargazers      Z0001.0012.0001.0003.0004.0004                     6
+   A02BL                           Wolffishes      Z0001.0012.0001.0003.0004.0001                     6
+   A02BM  Miscellaneous pelagic marine fishes           Z0001.0012.0001.0003.0007                     5
+
+----------------------------------------------------------------------------------------------------
+Keyword: flour
+Matches: 41
+termCode       termExtendedName                 reportHierarchyCode  reportHierarchyLevel
+   A002E         Amaranth flour      Z0001.0001.0001.0002.0003.0002                     6
+   A002G        Buckwheat flour      Z0001.0001.0001.0002.0003.0004                     6
+   A002L           Barley flour      Z0001.0001.0001.0002.0003.0003                     6
+   A002Q            Maize flour Z0001.0001.0001.0002.0003.0005.0001                     7
+   A002T           Millet flour      Z0001.0001.0001.0002.0003.0006                     6
+   A002Y              Oat flour      Z0001.0001.0001.0002.0003.0007                     6
+   A003F             Rice flour      Z0001.0001.0001.0002.0003.0008                     6
+   A003J              Rye flour      Z0001.0001.0001.0002.0003.0009                     6
+   A003K     Rye flour, refined Z0001.0001.0001.0002.0003.0009.0001                     7
+   A003L      Rye flour, medium Z0001.0001.0001.0002.0003.0009.0002                     7
+   A003M   Rye flour, wholemeal Z0001.0001.0001.0002.0003.0009.0003                     7
+   A003N Rye flour, gluten free Z0001.0001.0001.0002.0003.0009.0004                     7
+   A003T          Sorghum flour      Z0001.0001.0001.0002.0003.0010                     6
+   A003X            Wheat flour      Z0001.0001.0001.0002.0003.0012                     6
+   A003Y      Wheat flour white Z0001.0001.0001.0002.0003.0012.0001                     7
+   A003Z           Graham flour Z0001.0001.0001.0002.0003.0012.0002                     7
+   A004A     Wheat flour, brown Z0001.0001.0001.0002.0003.0012.0003                     7
+   A004B  Wheat wholemeal flour Z0001.0001.0001.0002.0003.0012.0004                     7
+   A004C     Wheat flour, durum Z0001.0001.0001.0002.0003.0012.0005                     7
+   A004D         Chapatti flour Z0001.0001.0001.0002.0003.0012.0006                     7
+
+----------------------------------------------------------------------------------------------------
+Keyword: additive
+Matches: 2
+termCode                                                            termExtendedName  reportHierarchyCode  reportHierarchyLevel
+   A046L Major isolated ingredients, additives, flavours, baking and processing aids      Z0001.0027.0006                     3
+   A047R       Food additives other than flavours, colours and artificial sweeteners Z0001.0027.0006.0004                     4
+
+----------------------------------------------------------------------------------------------------
+Keyword: flavour
+Matches: 274
+termCode                                              termExtendedName            reportHierarchyCode  reportHierarchyLevel
+   A01QP             Fruit preparations for fillings and/or flavouring           Z0001.0010.0002.0004                     4
+   A02MP                                               Flavoured milks                Z0001.0015.0008                     3
+   A02MT                                                Flavoured whey           Z0001.0015.0006.0003                     4
+   A02ND                                          Flavoured sour cream           Z0001.0015.0005.0003                     4
+   A02NH                                  Yoghurt, cow milk, flavoured Z0001.0015.0003.0001.0001.0002                     6
+   A02NL                                Yoghurt, sheep milk, flavoured Z0001.0015.0003.0001.0002.0002                     6
+   A02NP                                 Yoghurt, goat milk, flavoured Z0001.0015.0003.0001.0003.0002                     6
+   A02NQ Yoghurt drinks, including sweetened and/or flavoured variants           Z0001.0015.0003.0002                     4
+   A02PC                      Flavoured traditional sour milk products      Z0001.0015.0003.0003.0004                     5
+   A032Q                                               Flavoured sugar Z0001.0027.0002.0001.0001.0003                     6
+   A03DY                                       Flavoured bottled water      Z0001.0018.0001.0002.0003                     5
+   A03EX                               Soft drink, flavoured, no fruit           Z0001.0018.0002.0002                     4
+   A03EZ                                     Soft drink, apple flavour      Z0001.0018.0002.0002.0003                     5
+   A03FA                                   Soft drink, apricot flavour      Z0001.0018.0002.0002.0004                     5
+   A03FB                                    Soft drink, banana flavour      Z0001.0018.0002.0002.0005                     5
+   A03FC                                    Soft drink, cherry flavour      Z0001.0018.0002.0002.0006                     5
+   A03FD                              Soft drink, flavoured with herbs      Z0001.0018.0002.0002.0007                     5
+   A03FE                                Soft drink, grapefruit flavour      Z0001.0018.0002.0002.0008                     5
+   A03FF                                     Soft drink, lemon flavour      Z0001.0018.0002.0002.0009                     5
+   A03FG                                      Soft drink, lime flavour      Z0001.0018.0002.0002.0010                     5
+
+----------------------------------------------------------------------------------------------------
+Keyword: color
+Matches: 0
+
+----------------------------------------------------------------------------------------------------
+Keyword: colour
+Matches: 5
+termCode                                                      termExtendedName       reportHierarchyCode  reportHierarchyLevel
+   A047N                                                          Food colours      Z0001.0027.0006.0002                     4
+   A047P                                                   Natural food colour Z0001.0027.0006.0002.0001                     5
+   A047Q                                                Artificial food colour Z0001.0027.0006.0002.0002                     5
+   A047R Food additives other than flavours, colours and artificial sweeteners      Z0001.0027.0006.0004                     4
+   A0DPA                                            Coloured carrots varieties Z0001.0002.0009.0002.0002                     5
+
+
